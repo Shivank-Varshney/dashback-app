@@ -1,0 +1,7 @@
+{
+  "name": "dashabck-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
