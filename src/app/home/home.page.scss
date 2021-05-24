@@ -112,8 +112,16 @@
         }
         &:hover{
             height: 620px;
+            transition-duration: 1s;
         }
     }
+}
+
+.container-card{
+    height: 620px;
+}
+.cont-card{
+    height: 120px
 }
 
 #navbar{

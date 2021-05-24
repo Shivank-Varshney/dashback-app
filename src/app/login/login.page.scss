@@ -1,0 +1,24 @@
+#container{
+    background-color: #d8dce2;
+    height: 100vh;
+    span{
+        color: red;
+    }
+    #container-card{
+        background-color: #fff;
+        height: 60px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-radius: 60px 60px 0 0;
+        .card-line{
+            height: 4px;
+            width: 150px;
+            background-color: rgb(233, 229, 229);
+            margin: 10px auto;
+        }
+        &:hover{
+            height: 620px;
+        }
+    }
+}

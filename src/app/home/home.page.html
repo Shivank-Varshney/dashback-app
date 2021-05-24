@@ -42,10 +42,10 @@
     </ion-row>
    </ion-grid>
 
-   <ion-grid id="container-card">
+   <ion-grid id="container-card" [ngClass]="{'container-card': slide == true, 'cont-card': slide == false}">
      <ion-row>
        <ion-col>
-         <p class="card-line"></p>
+         <router-outlet></router-outlet>
        </ion-col>
      </ion-row>
    </ion-grid>
@@ -53,7 +53,7 @@
  <div id="navbar">
    <ion-grid>
      <ion-row class="ion-justify-content-center ion-text-center">
-       <ion-col>©</ion-col>
+       <ion-col (click)="slideUp()" routerLink='dash'>©</ion-col>
        <ion-col>©</ion-col>
        <ion-col>©</ion-col>
        <ion-col>©</ion-col>
@@ -62,3 +62,23 @@
    </ion-grid>
  </div>
 </ion-content> 
+
+
+<!-- <ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <span>login</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid id="container-card">
+      <ion-row>
+        <ion-col>
+          <p class="card-line"></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content> -->
