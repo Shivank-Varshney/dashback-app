@@ -36,7 +36,7 @@
       </ion-row>
     </ion-grid>
   </div>
-  <div id="navbar">
+  <!-- <div id="navbar">
     <ion-grid>
       <ion-row class="ion-justify-content-center ion-text-center">
         <ion-col (click)="slideUp()" routerLink='dash'>©</ion-col>
@@ -46,5 +46,27 @@
         <ion-col (click)="slideUp()" routerLink='history'>©</ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </div> -->
+  <ion-tabs class="ion-tabs">
+    <ion-tab-bar slot="bottom" class="tab-bar">
+      <ion-tab-button tab="dash" (click)="slideUp()">
+        <ion-icon name="home"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="more" (click)="slideUp()">
+        <ion-icon name="grid"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="eComm" (click)="slideUp()">
+        <ion-icon name="people"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="wallet" (click)="slideUp()">
+        <ion-icon name="wallet"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="history" (click)="slideUp()">
+        <ion-icon name="list"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
  </ion-content> 

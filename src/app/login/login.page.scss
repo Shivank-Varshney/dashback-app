@@ -1,16 +1,15 @@
 #container{
-    background-color: #d8dce2;
-    height: 100vh;
-    span{
-        color: red;
-    }
+    background-color: #D8E5ED;
+    
     #container-card{
         background-color: #fff;
+        color: #000;
         height: 60px;
         width: 100%;
         position: absolute;
         bottom: 0;
         border-radius: 60px 60px 0 0;
+        overflow: hidden;
         .card-line{
             height: 4px;
             width: 150px;
@@ -18,7 +17,7 @@
             margin: 10px auto;
         }
         &:hover{
-            height: 620px;
+            min-height: 90vh;
         }
     }
 }
