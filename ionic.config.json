@@ -1,7 +1,7 @@
 {
-  "name": "dashabck-app",
+  "name": "dashback",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }

@@ -1,140 +1,81 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-// #container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   height: 100vh;
-//   background-color: #fff;
-//   .outer-div {
-//     height: 150px;
-//     width: 150px;
-//     border: 2px solid #74BDDB;
-//     outline: 2px solid #606C8D;
-//     outline-offset: 3px;
-//     transition-property: transform;
-//     animation: loader 60s infinite;
-//   }
-//   .inner-div {
-//     height: 150px;
-//     width: 150px;
-//     background-color: #fff;
-//     outline-offset: 3px;
-//     transform: rotate(40deg);
-//   }
-// }
-
-// @keyframes loader {
-//   from{
-//     transform: rotate(0deg);
-//   }
-//   to{
-//     transform: rotate(3600deg);
-//   }
-// }
-
-// .inner-img{
-//   background-image: url(../../assets/icon2.png);
-//   background-size: cover;
-//   height: 100px;
-//   width: 100px;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   margin-left: -50px;
-//   margin-top: -50px;
-//   animation: loader-img 15s;
-// }
-
-// @keyframes loader-img {
-//   from{
-//     background-image: url(../../assets/icon1.png);
-//   }
-//   to{
-//     background-image: url(../../assets/icon2.png);
-//   }
-// }
-
-
-
-
 #container{
-    height: 100vh;
-    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
-    .dashboard-heading{
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: 28px;
-        margin-top: 20px;
-    }
-    .img{
-        height: 150px;
-        width: 150px;
-        background-color: #fff;
-        margin: 0 auto;
-        border-radius: 50%;
-        margin-top: 25px;
-        border: 4px solid #1D1D62;
-    }
-    .dashboard-profile-edit{
-        text-align: center;
-        font-size: 11px;
-        margin-top: 5px;
-        text-transform: capitalize;
-    }
-    .dashboard-username{
-        padding: 0 0 0 30px;
-        font-size: 32px;
-        margin-top: 50px;
-    }
-    .dashboard-number{
-        padding: 0 0 0 30px;
-        margin-top: 20px;
-    }
-    #container-card{
-        background-color: #fff;
-        height: 120px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        border-radius: 60px 60px 0 0;
-        .card-line{
-            height: 4px;
-            width: 150px;
-            background-color: rgb(233, 229, 229);
-            margin: 10px auto;
-        }
-        &:hover{
-            height: 620px;
-            transition-duration: 1s;
-        }
-    }
+  height: 100vh;
+  background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+  .dashboard-heading{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 28px;
+      margin-top: 20px;
+  }
+  .img{
+      height: 150px;
+      width: 150px;
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 50%;
+      margin-top: 25px;
+      border: 4px solid #1D1D62;
+  }
+  .dashboard-profile-edit{
+      text-align: center;
+      font-size: 11px;
+      margin-top: 5px;
+      text-transform: capitalize;
+  }
+  .dashboard-username{
+      padding: 0 0 0 30px;
+      font-size: 32px;
+      margin-top: 50px;
+  }
+  .dashboard-number{
+      padding: 0 0 0 30px;
+      margin-top: 20px;
+  }
+  #container-card{
+      background-color: #fff;
+      height: 120px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 40px 40px 0 0;
+      .card-line{
+          height: 4px;
+          width: 150px;
+          background-color: rgb(233, 229, 229);
+          margin: 10px auto;
+      }
+      &:hover{
+          height: 620px;
+          transition-duration: 1s;
+      }
+  }
 }
 
 .container-card{
-    height: 620px;
+  height: 620px;
 }
 .cont-card{
-    height: 120px
+  height: 120px
 }
 
 #navbar{
-    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-    height: 50px;
-    border-radius: 20px 20px 0 0;
-    padding: 12px 0;
-    font-size: 24px;
-    &:hover{
-        color: #1D1D62;
-    }
+  background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  height: 50px;
+  border-radius: 20px 20px 0 0;
+  padding: 12px 0;
+  font-size: 24px;
+  &:hover{
+      color: #1D1D62;
+  }
 }
