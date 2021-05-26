@@ -11,7 +11,7 @@ export class LoginPage {
     constructor() {}
   
     slideUp(){
-      this.slide = '80vh'
+      this.slide = '70vh'
     }
     slideDown(){
       this.slide = '8vh'
