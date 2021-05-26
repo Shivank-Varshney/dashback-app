@@ -13,4 +13,7 @@ trans = '1s';
   slideUp(){
     this.slide = '90vh'
   }
+  slideDown(){
+    this.slide = '15vh'
+  }
 }
