@@ -1,113 +1,310 @@
+// *{
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     user-select: none;
+// }
+
+// #container{
+//     background-color: #D8E5ED;
+//     .animation{
+//         height: 100vh;
+//         .login-btn{
+//             background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+//             border-radius: 50%;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             z-index: 10;
+//             height: 10rem;
+//             width: 10rem;
+//             margin-top: -5rem;
+//             margin-left: -5rem;
+//             margin-bottom: -10vh;
+//             p{
+//                 display: flex;
+//                 justify-content: center;
+//                 padding-top: 4rem;
+//                 color: #000;
+//                 font-weight: bolder;
+//                 font-size: 2rem;
+//             }
+//         }
+//         .bubbles{
+//             height: 20rem;
+//             width: 20rem;
+//             border-radius: 50%;
+//             transition-duration: 3s;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             margin-top: -10rem;
+//             margin-left: -10rem;
+//             margin-bottom: -10vh;
+//             animation: bubble 500s infinite;
+//             p{
+//                 background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+//                 border-radius: 50%;
+//                 position: relative;
+//             }
+//             .bubble1{
+//                 height: 2rem;
+//                 width: 2rem;
+//                 top: 13%;
+//                 left: 60%;
+//             }
+//             .bubble2{
+//                 height: 1.2rem;
+//                 width: 1.2rem;
+//                 top: 7%;
+//                 left: 50%;
+//             }
+//             .bubble3{
+//                 height: 2.5rem;
+//                 width: 2.5rem;
+//                 top: 50%;
+//                 left: 16%;
+//             }
+//             .bubble4{
+//                 height: 1rem;
+//                 width: 1rem;
+//                 top: 50%;
+//                 left: 60%;
+//             }
+//             .bubble5{
+//                 height: 4rem;
+//                 width: 4rem;
+//                 top: 30%;
+//                 left: 70%;
+//             }
+//             &:hover{
+//                 transform: rotateZ(360deg);
+//             }
+//         }
+//         @keyframes bubble {
+//             from{
+//               transform: rotateZ(0deg);
+//             }
+//             to{
+//               transform: rotateZ(3600deg);
+//             }
+//           }
+//     }
+//     #container-card{
+//         background-color: #fff;
+//         height: 10vh;
+//         width: 100%;
+//         position: absolute;
+//         bottom: 0;
+//         border-radius: 40px 40px 0 0;
+//         z-index: 100;
+//         overflow: hidden;
+//         .card-line{
+//             height: 4px;
+//             width: 150px;
+//             background-color: rgb(233, 229, 229);
+//             margin: 25px auto;
+//         }
+//         form{
+//             margin: 20vh auto;
+//             .input-field{
+//                 background-color: #fff;
+//                 border: 2px solid #000;
+//                 color: #3D54BA;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *{
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .container{
+//     background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+//     height: 100vh;
+//     .svg{
+//         text-align: center;
+//         margin: 2rem;
+//     }
+//     #Layer_1{
+//         height: 50px;
+//     }
+//     .otp-heading{
+//         text-align: center;
+//         text-transform: uppercase;
+//         font-size: 1.5rem;
+//     }
+// }
+// #container-card{
+//     background-color: #fff;
+//     height: 10vh;
+//     width: 100%;
+//     position: absolute;
+//     bottom: 0;
+//     border-radius: 40px 40px 0 0;
+//     z-index: 100;
+//     overflow-y: hidden;
+//     .card-line{
+//         height: 4px;
+//         width: 150px;
+//         background-color: rgb(233, 229, 229);
+//         margin: 15px auto;
+//     }
+//     .card-padding{
+//         margin: 10vh 0;
+//     }
+//     .input-field{
+//         background-color: rgb(233, 229, 229);
+//         height: 50px;
+//         width: 50px;
+//         margin: 40px 2px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: rgba(0, 0, 0, 0.541);
+//         font-size: 1.5rem;
+//     }
+//     .ion-keypad{
+//         color: rgba(0, 0, 0, 0.541);
+//         height: 50px;
+//         width: 50px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         cursor: pointer;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    user-select: none;
 }
 
-#container{
-    background-color: #D8E5ED;
-    .animation{
-        height: 100vh;
-        .login-btn{
-            background-image: linear-gradient(to right, #37A7E6, #3D54BA);
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 10;
-            height: 10rem;
-            width: 10rem;
-            margin-top: -5rem;
-            margin-left: -5rem;
-            margin-bottom: -10vh;
-            p{
-                display: flex;
-                justify-content: center;
-                padding-top: 4rem;
-                color: #000;
-                font-weight: bolder;
-                font-size: 2rem;
-            }
-        }
-        .bubbles{
-            height: 20rem;
-            width: 20rem;
-            border-radius: 50%;
-            transition-duration: 3s;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -10rem;
-            margin-left: -10rem;
-            margin-bottom: -10vh;
-            animation: bubble 500s infinite;
-            p{
-                background-image: linear-gradient(to right, #37A7E6, #3D54BA);
-                border-radius: 50%;
-                position: relative;
-            }
-            .bubble1{
-                height: 2rem;
-                width: 2rem;
-                top: 13%;
-                left: 60%;
-            }
-            .bubble2{
-                height: 1.2rem;
-                width: 1.2rem;
-                top: 7%;
-                left: 50%;
-            }
-            .bubble3{
-                height: 2.5rem;
-                width: 2.5rem;
-                top: 50%;
-                left: 16%;
-            }
-            .bubble4{
-                height: 1rem;
-                width: 1rem;
-                top: 50%;
-                left: 60%;
-            }
-            .bubble5{
-                height: 4rem;
-                width: 4rem;
-                top: 30%;
-                left: 70%;
-            }
-            &:hover{
-                transform: rotateZ(360deg);
-            }
-        }
-        @keyframes bubble {
-            from{
-              transform: rotateZ(0deg);
-            }
-            to{
-              transform: rotateZ(3600deg);
-            }
-          }
+.container{
+    background-color: #fff;
+    height: 100vh;
+    .svg{
+        text-align: center;
+        margin: 2rem;
     }
-    #container-card{
-        background-color: #fff;
-        height: 10vh;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        border-radius: 40px 40px 0 0;
-        z-index: 100;
-        overflow: hidden;
-        .card-line{
-            height: 4px;
-            width: 150px;
-            background-color: rgb(233, 229, 229);
-            margin: 10px auto;
-        }
-        .input-field{
-            background-color: #fff;
-            border: 2px solid #000;
-        }
+    #Layer_1{
+        height: 50px;
+    }
+    .otp-heading{
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+}
+#container-card{
+    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 40px 40px 0 0;
+    z-index: 100;
+    overflow-y: hidden;
+    .card-line{
+        height: 4px;
+        width: 150px;
+        background-color: rgb(233, 229, 229);
+        margin: 15px auto;
+    }
+    .card-padding{
+        margin: 10vh 0;
+    }
+    .input-field{
+        background-color: rgb(233, 229, 229);
+        height: 50px;
+        width: 50px;
+        margin: 40px 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.541);
+        font-size: 1.5rem;
+    }
+    .ion-keypad{
+        color: rgba(0, 0, 0, 0.541);
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 }

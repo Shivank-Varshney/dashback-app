@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  slide = '10vh';
+  slide = '8vh';
   trans = '1s';
     constructor() {}
   
@@ -14,6 +14,6 @@ export class LoginPage {
       this.slide = '80vh'
     }
     slideDown(){
-      this.slide = '10vh'
+      this.slide = '8vh'
     }
 }
