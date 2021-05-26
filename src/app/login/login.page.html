@@ -1,25 +1,26 @@
 <ion-content [fullscreen]="true">
   <div id="container">
-    <div class="animation">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-            <div class="login-btn">
-              <p>login</p>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
-    <ion-grid id="container-card">
+    <ion-grid>
+      <ion-row class="animation" (click)="slideDown()">
+        <ion-col class="login-btn">
+          <p>Login</p>
+        </ion-col>
+        <ion-col size="12">
+          <div class="bubbles">
+            <p class="bubble1"></p>
+            <p class="bubble2"></p>
+            <p class="bubble3"></p>
+            <p class="bubble4"></p>
+            <p class="bubble5"></p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid id="container-card" [ngStyle]="{'height':slide, 'transition-duration': trans}" (click)="slideUp()">
       <ion-row>
         <ion-col>
           <p class="card-line"></p>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <p></p>
+          <input type="text" class="input-field">
         </ion-col>
       </ion-row>
     </ion-grid>

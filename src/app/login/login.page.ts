@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class LoginPage {
+  slide = '10vh';
+  trans = '1s';
+    constructor() {}
+  
+    slideUp(){
+      this.slide = '80vh'
+    }
+    slideDown(){
+      this.slide = '10vh'
+    }
 }
