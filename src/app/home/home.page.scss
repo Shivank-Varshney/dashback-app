@@ -38,26 +38,6 @@
       padding: 0 0 0 30px;
       margin-top: 20px;
   }
-  // #container-card{
-  //     background-color: #fff;
-  //     height: 120px;
-  //     width: 100%;
-  //     position: absolute;
-  //     bottom: 0;
-  //     border-radius: 40px 40px 0 0;
-  //     .card-line{
-  //         height: 4px;
-  //         width: 150px;
-  //         background-color: rgb(233, 229, 229);
-  //         margin: 10px auto;
-  //     }
-  //     &:hover{
-  //         height: 620px;
-  //         transition-duration: 1s;
-  //     }
-  // }
-
-
   #container-card{
     background-color: #fff;
     width: 100%;
@@ -72,58 +52,7 @@
         background-color: rgb(233, 229, 229);
         margin: 15px auto 60px;
     }
-    .ionic-col{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin-top: 5px;
-      .img-fluid{
-        height: 35px;
-        cursor: pointer;
-      }
-      p{
-        font-family: "Calibri", sans-serif;
-        color: #000;
-        text-align: center;
-        font-size: 0.9rem;
-        text-transform: capitalize;
-        margin: 10px;
-      }
-    }
-    .ad-sense{
-      background-color: rgba(128, 128, 128, 0.377);
-      height: 5rem;
-      margin: 40px 0;
-    }
-    .utility-heading{
-      color: #000;
-      text-transform: capitalize;
-      font-size: 1.2rem;
-      border-bottom: 1px solid #000;
-      display: inline-block;
-      font-weight: 500;
-      margin: 0 0 30px 10px;
-    }
-    .utility-img{
-      height: 45px;
-      cursor: pointer;
-    }
-    .utility-para{
-      font-family: "Calibri", sans-serif;
-      color: #000;
-      text-align: center;
-      font-size: 0.8rem !important;
-      text-transform: capitalize;
-      margin: 10px;
-    }
-}
-}
-
-.container-card{
-  height: 620px;
-}
-.cont-card{
-  height: 120px
+  }
 }
 
 #navbar{
@@ -137,9 +66,6 @@
   padding: 12px 0;
   font-size: 24px;
   overflow: hidden;
-  &:hover{
-      color: #1D1D62;
-  }
   svg{
     height: 25px;
   }

@@ -33,7 +33,7 @@ const routes: Routes = [
        component: HistoryComponent
      }
    ]
-  }
+  },
 ];
 
 @NgModule({

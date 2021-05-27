@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.balance-detail{
+    color: #1D1D67;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    span{
+      font-size: 1.8rem;
+    }
+  }
+  .balance-text{
+    color: #1D1D62;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  
+  .user-img{
+    color: #1D1D62;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #1D1D62;
+    margin-left: auto;
+  }
+  .balance-icon-align{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 60px 0;
+    .balance-icon{
+      height: 2.3rem;
+    }
+    .balance-icon-para{
+      color: #1D1D62;
+      text-transform: capitalize;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }

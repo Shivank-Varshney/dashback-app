@@ -1,0 +1,118 @@
+#container-card{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 40px 40px 0 0;
+    overflow: scroll;
+    padding: 0 20px;
+    .card-line{
+        height: 4px;
+        width: 150px;
+        background-color: rgb(233, 229, 229);
+        margin: 15px auto 60px;
+    }
+    .balance-detail{
+      color: #1D1D67;
+      font-weight: bolder;
+      font-size: 2.5rem;
+    }
+    .balance-text{
+      color: #1D1D62;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    .user-img{
+      color: #1D1D62;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid #1D1D62;
+      margin-left: auto;
+    }
+    .balance-icon{
+      height: 2.5rem;
+      margin: 50px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #container-card{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 40px 40px 0 0;
+    overflow: scroll;
+    padding: 0 20px;
+    .card-line{
+        height: 4px;
+        width: 150px;
+        background-color: rgb(233, 229, 229);
+        margin: 15px auto 60px;
+    }
+    .ionic-col{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 5px;
+      .img-fluid{
+        height: 35px;
+        cursor: pointer;
+      }
+      p{
+        font-family: "Calibri", sans-serif;
+        color: #000;
+        text-align: center;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+        margin: 10px;
+      }
+    }
+    .ad-sense{
+      background-color: rgba(128, 128, 128, 0.377);
+      height: 5rem;
+      margin: 40px 0;
+    }
+    .utility-heading{
+      color: #000;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      font-weight: 500;
+      margin: 0 0 30px 10px;
+    }
+    .utility-img{
+      height: 45px;
+      cursor: pointer;
+    }
+    .utility-para{
+      font-family: "Calibri", sans-serif;
+      color: #000;
+      text-align: center;
+      font-size: 0.8rem !important;
+      text-transform: capitalize;
+      margin: 10px;
+    }
+}
