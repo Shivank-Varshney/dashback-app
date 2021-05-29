@@ -29,13 +29,15 @@
     </ion-grid>
 
  
-    <ion-grid id="container-card" [ngStyle]="{'height':slide, 'transition-duration': trans}">
+    <ion-grid id="container-card" [ngStyle]="{'height':outerslide, 'transition-duration': outertrans}">
       <ion-row>
         <ion-col>
           <p class="card-line"></p>
         </ion-col>
       </ion-row>
-      <router-outlet></router-outlet>
+      <div class="inner-card" [ngStyle]="{'height':innerslide, 'transition-duration': innertrans}">
+        <router-outlet></router-outlet>
+      </div>
     </ion-grid>
 
   </div>

@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-slide = '15vh';
-trans = '1s';
+outerslide = '15vh';
+outertrans = '1s';
+innerslide = '0vh';
+innertrans = '1s';
   constructor() {}
 
   slideUp(){
-    this.slide = '90vh'
-  }
-  slideDown(){
-    this.slide = '15vh'
+    this.outerslide = '90vh'
+    this.innerslide = '75vh'
   }
 }

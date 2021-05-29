@@ -7,15 +7,16 @@
 .balance-detail{
     color: #1D1D67;
     font-weight: bolder;
-    font-size: 2.5rem;
+    font-size: 2rem;
     span{
-      font-size: 1.8rem;
+      font-size: 1rem;
     }
   }
   .balance-text{
     color: #1D1D62;
     text-transform: capitalize;
     font-weight: 500;
+    font-size: 0.8rem;
   }
   
   .user-img{
@@ -32,12 +33,12 @@
     flex-direction: column;
     margin: 60px 0;
     .balance-icon{
-      height: 2.3rem;
+      height: 1.8rem;
     }
     .balance-icon-para{
       color: #1D1D62;
       text-transform: capitalize;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       font-weight: 500;
       text-align: center;
       margin-top: 10px;
@@ -55,9 +56,43 @@
     margin: 5px 0;
     p{
       text-transform: capitalize;
-      font-size: 1rem;
+      font-size: 0.8rem;
       span{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
       }
     }
   }
+  @media only screen and (max-width: 360px) {
+    .balance-detail{
+      font-size: 1.8rem;
+      span{
+        font-size: 0.9rem;
+      }
+    }
+    .balance-text{
+      font-size: 0.6rem;
+    }
+    
+    .user-img{
+      height: 40px;
+      width: 40px;
+    }
+    .balance-icon-align{
+      .balance-icon{
+        height: 1.6rem;
+      }
+      .balance-icon-para{
+        font-size: 0.6rem;
+      }
+    }
+  
+    .earning-history{
+      margin: 5px 0;
+      p{
+        font-size: 0.7rem;
+        span{
+          font-size: 0.5rem;
+        }
+      }
+    }
+    }

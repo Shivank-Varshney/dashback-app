@@ -44,13 +44,17 @@
     position: absolute;
     bottom: 0;
     border-radius: 40px 40px 0 0;
-    overflow: scroll;
-    padding: 0 20px;
+    padding-bottom: 10vh;
     .card-line{
         height: 4px;
         width: 150px;
         background-color: rgb(233, 229, 229);
-        margin: 15px auto 60px;
+        margin: 15px auto 40px;
+    }
+    .inner-card{
+      height: 50vh;
+      overflow-y: scroll;
+      padding: 15px 20px;
     }
   }
 }
