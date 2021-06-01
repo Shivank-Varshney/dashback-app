@@ -35,10 +35,10 @@
           <p class="card-line"></p>
         </ion-col>
       </ion-row>
-      <div class="inner-card" [ngStyle]="{'height':innerslide, 'transition-duration': innertrans}">
+      <div class="inner-card" [ngStyle]="{'height':innerslide, 'padding-bottom': innerpadding, 'transition-duration': innertrans}">
         <router-outlet></router-outlet>
       </div>
-    </ion-grid>
+    </ion-grid> 
 
   </div>
 

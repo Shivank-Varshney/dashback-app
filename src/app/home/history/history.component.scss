@@ -7,7 +7,7 @@
 h4{
     color: #000;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 1.8rem;
     padding-left: 10px;
     margin-bottom: 10px;
 }
@@ -23,34 +23,97 @@ h4{
     margin: 5px 0;
     p{
       text-transform: capitalize;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       line-height: 1rem;
       .date-style{
           text-transform: lowercase;
-          font-size: 0.7rem;
+          font-size: 1.1rem;
       }
       span{
-        font-size: 0.7rem;
+        font-size: 1.1rem;
       }
       .payment-arrow{
-        height: 12px;
+        height: 18px;
       }
     }
   }
 
-  @media only screen and (max-width: 360px) {
+@media only screen and (max-width: 1080px) {
+  h4{
+    font-size: 1.6rem;
+  }
   .history{
-      p{
-        font-size: 0.7rem;
-        .date-style{
-            font-size: 0.6rem;
-        }
-        span{
-          font-size: 0.6rem;
-        }
-        .payment-arrow{
-          height: 10px;
-        }
+    p{
+      font-size: 1rem;
+      .date-style{
+          font-size: 0.9rem;
+      }
+      span{
+          font-size: 0.9rem;
+      }
+      .payment-arrow{
+          height: 16px;
       }
     }
   }
+}
+
+@media only screen and (max-width: 720px) {
+  h4{
+    font-size: 1.4rem;
+  }
+  .history{
+    p{
+      font-size: 0.9rem;
+      .date-style{
+          font-size: 0.8rem;
+      }
+      span{
+          font-size: 0.8rem;
+      }
+      .payment-arrow{
+          height: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h4{
+    font-size: 1.2rem;
+  }
+  .history{
+    p{
+      font-size: 0.8rem;
+      .date-style{
+          font-size: 0.7rem;
+      }
+      span{
+          font-size: 0.7rem;
+      }
+      .payment-arrow{
+          height: 12px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h4{
+    font-size: 1rem;
+  }
+  .history{
+    p{
+      font-size: 0.7rem;
+      .date-style{
+          font-size: 0.6rem;
+      }
+      span{
+          font-size: 0.6rem;
+      }
+      .payment-arrow{
+          height: 10px;
+      }
+    }
+  }
+}

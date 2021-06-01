@@ -7,22 +7,22 @@
 .balance-detail{
     color: #1D1D67;
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 2.6rem;
     span{
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
   .balance-text{
     color: #1D1D62;
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   
   .user-img{
     color: #1D1D62;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     border: 2px solid #1D1D62;
     margin-left: auto;
@@ -33,18 +33,17 @@
     flex-direction: column;
     margin: 60px 0;
     .balance-icon{
-      height: 1.8rem;
+      height: 2.4rem;
     }
     .balance-icon-para{
       color: #1D1D62;
       text-transform: capitalize;
-      font-size: 0.7rem;
+      font-size: 1.4rem;
       font-weight: 500;
       text-align: center;
       margin-top: 10px;
     }
   }
-
 
   .earning-history{
     background-color: rgb(224, 219, 219);
@@ -53,46 +52,153 @@
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
+    margin: 13px 0;
     p{
       text-transform: capitalize;
-      font-size: 0.8rem;
+      font-size: 1.5rem;
       span{
-        font-size: 0.6rem;
+        font-size: 1.3rem;
       }
     }
   }
-  @media only screen and (max-width: 360px) {
+
+
+  @media only screen and (max-width: 1080px) {
     .balance-detail{
-      font-size: 1.8rem;
+      font-size: 2.4rem;
       span{
-        font-size: 0.9rem;
+        font-size: 1.2rem;
       }
     }
     .balance-text{
-      font-size: 0.6rem;
+      font-size: 1.3rem;
     }
     
     .user-img{
-      height: 40px;
-      width: 40px;
+      height: 55px;
+      width: 55px;
     }
     .balance-icon-align{
       .balance-icon{
-        height: 1.6rem;
+        height: 2.2rem;
       }
       .balance-icon-para{
-        font-size: 0.6rem;
+        font-size: 1.2rem;
       }
     }
   
     .earning-history{
-      margin: 5px 0;
+      margin: 11px 0;
       p{
-        font-size: 0.7rem;
+        font-size: 1.3rem;
         span{
-          font-size: 0.5rem;
+          font-size: 1.1rem;
         }
       }
     }
+}
+
+@media only screen and (max-width: 720px) {
+  .balance-detail{
+    font-size: 2.2rem;
+    span{
+      font-size: 1.1rem;
     }
+  }
+  .balance-text{
+    font-size: 1.1rem;
+  }
+  
+  .user-img{
+    height: 50px;
+    width: 50px;
+  }
+  .balance-icon-align{
+    .balance-icon{
+      height: 2rem;
+    }
+    .balance-icon-para{
+      font-size: 1rem;
+    }
+  }
+
+  .earning-history{
+    margin: 9px 0;
+    p{
+      font-size: 1.1rem;
+      span{
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .balance-detail{
+    font-size: 2rem;
+    span{
+      font-size: 1rem;
+    }
+  }
+  .balance-text{
+    font-size: 0.9rem;
+  }
+  
+  .user-img{
+    height: 45px;
+    width: 45px;
+  }
+  .balance-icon-align{
+    .balance-icon{
+      height: 1.8rem;
+    }
+    .balance-icon-para{
+      font-size: 0.8rem;
+    }
+  }
+
+  .earning-history{
+    margin: 7px 0;
+    p{
+      font-size: 0.9rem;
+      span{
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .balance-detail{
+    font-size: 1.8rem;
+    span{
+      font-size: 0.9rem;
+    }
+  }
+  .balance-text{
+    font-size: 0.7rem;
+  }
+  
+  .user-img{
+    height: 40px;
+    width: 40px;
+  }
+  .balance-icon-align{
+    .balance-icon{
+      height: 1.6rem;
+    }
+    .balance-icon-para{
+      font-size: 0.6rem;
+    }
+  }
+
+  .earning-history{
+    margin: 5px 0;
+    p{
+      font-size: 0.7rem;
+      span{
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
