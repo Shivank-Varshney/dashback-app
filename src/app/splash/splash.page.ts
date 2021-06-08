@@ -8,20 +8,21 @@ import { Router } from '@angular/router';
 })
 export class SplashPage implements OnInit {
 
-    constructor(private router: Router){}
-  
-    ngOnInit(){
-      this.StartTimer();
-    }
-  
-    StartTimer(){
-      setTimeout(()=>{
-        this.routing()
-      },10000)
-  
-    }
+  constructor(private router: Router) { }
 
-    routing(){
-      this.router.navigate(['home'])
-    }
+  ngOnInit(){
+    this.StartTimer();
+  }
+
+  StartTimer(){
+    setTimeout(()=>{
+      this.routing()
+    },10000)
+
+  }
+
+  routing(){
+    this.router.navigate(['home'])
+  }
+
 }

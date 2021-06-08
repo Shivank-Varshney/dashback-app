@@ -1,7 +1,7 @@
 {
   "name": "dashback",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
   "type": "angular"
 }

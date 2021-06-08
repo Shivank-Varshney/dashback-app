@@ -12,17 +12,21 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'splash',
-    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'dash',
-    loadChildren: () => import('./dash/dash.module').then( m => m.DashPageModule)
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
   },
+  {
+    path: 'regi',
+    loadChildren: () => import('./regi/regi.module').then( m => m.RegiPageModule)
+  },
+  // {
+  //   path: 'regi/:mob',
+  //   loadChildren: () => import('./regi/regi.module').then(m => m.RegiPageModule)
+  // },
 ];
 
 @NgModule({

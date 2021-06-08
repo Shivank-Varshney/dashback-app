@@ -1,8 +1,8 @@
-<!-- <ion-content [fullscreen]="true">
-  <div id="container">
+<ion-content [fullscreen]="true">
+  <div id="container" [ngStyle]="{'background-image':backcolor, 'transition-duration': trans}">
     <ion-grid>
-      <ion-row class="animation" (click)="slideDown()">
-        <ion-col class="login-btn">
+      <ion-row class="animation">
+        <ion-col class="login-btn" [ngStyle]="{'top':topdist, 'background-image':bgimg, 'transition-duration': trans}" (click)="slideUp()">
           <p>Login</p>
         </ion-col>
         <ion-col size="12">
@@ -20,195 +20,61 @@
       <ion-row>
         <ion-col>
           <p class="card-line"></p>
-          <form>
-            <ion-item lines="full">
-              <ion-label position="floating">Name</ion-label>
-              <ion-input type="text" required></ion-input>
-            </ion-item>
-        
-            <ion-item lines="full">
-              <ion-label position="floating">Email</ion-label>
-              <ion-input type="email" required></ion-input>
-            </ion-item>
-        
-            <ion-item lines="full">
-              <ion-label position="floating">DOB</ion-label>
-              <ion-input type="text" required></ion-input>
-            </ion-item>
-        
-            <ion-item lines="full">
-              <ion-label position="floating">Mobile</ion-label>
-              <ion-input type="text" required></ion-input>
-            </ion-item>
-        
-            <ion-row>
-              <ion-col>
-                <ion-button type="submit" color="primary" expand="block">Submit</ion-button>
-              </ion-col>
-            </ion-row>
-          </form>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-</ion-content> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <ion-content [fullscreen]="true">
-  <div class="container">
-    <ion-grid (click)="slideDown()">
-      <ion-row>
-        <ion-col size="12">
-          <div class="svg">
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.9 36.93"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M38.07,44.2a3.38,3.38,0,0,0-5.75,2.39v.76H31a.55.55,0,0,0-.54.55h0v9.3a.54.54,0,0,0,.54.54h9.3a.54.54,0,0,0,.55-.54V52.32a.55.55,0,0,0-1.09,0v4.33H31.59V48.44H39.8v1.39a.55.55,0,1,0,1.09,0V47.9a.55.55,0,0,0-.55-.55H39.06v-.76a3.34,3.34,0,0,0-1-2.39Zm-4.66,2.39a2.28,2.28,0,0,1,4.56,0v.76H33.41Zm2.28,8.87a.55.55,0,0,0,.55-.54V53.18a1.82,1.82,0,1,0-1.09,0v1.74A.54.54,0,0,0,35.69,55.46Zm0-4.73a.72.72,0,0,1,0,1.44h0a.73.73,0,0,1-.71-.74A.72.72,0,0,1,35.69,50.73ZM22.74,48.65V47.09a.55.55,0,0,1,.55-.54.54.54,0,0,1,.54.54v1.56a.55.55,0,0,1-.54.55A.55.55,0,0,1,22.74,48.65ZM46.23,32H25.16a2.41,2.41,0,0,0-2.42,2.41V45a.55.55,0,0,0,.55.54.54.54,0,0,0,.54-.54V34.43a1.33,1.33,0,0,1,1.33-1.32h3.91l1.15,2.39a.54.54,0,0,0,.49.31h10a.54.54,0,0,0,.49-.31l1.15-2.39h3.91a1.32,1.32,0,0,1,1.32,1.32v32.1a1.32,1.32,0,0,1-1.32,1.32H25.16a1.33,1.33,0,0,1-1.33-1.32V51.1a.54.54,0,0,0-.54-.54.55.55,0,0,0-.55.54V66.53a2.41,2.41,0,0,0,2.42,2.41H46.23a2.41,2.41,0,0,0,2.41-2.41V34.43A2.41,2.41,0,0,0,46.23,32Zm-5.89,2.7H31.05l-.77-1.61H41.11Zm-1.3,29a.55.55,0,1,1,0,1.09h-6.7a.55.55,0,0,1,0-1.09Z" transform="translate(-22.74 -32.02)"/></svg>
+          <div>
+            <form [formGroup]="mobF" (ngSubmit)="checkMob()">
+              <!-- <ion-item lines="full">
+                <ion-label position="floating">Name</ion-label>
+                <ion-input type="text" required></ion-input>
+              </ion-item> -->
+          
+              <!-- <ion-item lines="full">
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" required></ion-input>
+              </ion-item> -->
+          
+              <!-- <ion-item lines="full">
+                <ion-label position="floating"></ion-label>
+                <ion-input type="text" required></ion-input>
+              </ion-item> -->
+          
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-item lines="Center" class="input-field">
+                      <ion-label class="label" position="floating">Mobile</ion-label>
+                      <ion-input type="tel" required formControlName="mobile"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+  
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-item lines="Center" class="input-field">
+                      <ion-label class="label" position="floating">Password</ion-label>
+                      <ion-input type="password" required formControlName="pass"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+  
+                <ion-row>
+                  <ion-col>
+                    <p (click)="regi()">Not registered Yet?</p>
+                  </ion-col>
+                </ion-row>
+            
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-button type="submit" class="btn" expand="block">Next</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </form>
           </div>
-        </ion-col>
-        <ion-col size="12">
-          <h4 class="otp-heading">otp verification</h4>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  <ion-grid id="container-card" [ngStyle]="{'min-height':slide, 'transition-duration': trans}" (click)="slideUp()">
-    <ion-row>
-      <ion-col>
-        <p class="card-line"></p>
-      </ion-col>
-    </ion-row>
-    <div class="card-padding">
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="2" class="input-field">1</ion-col>
-        <ion-col size="2" class="input-field">2</ion-col>
-        <ion-col size="2" class="input-field">3</ion-col>
-        <ion-col size="2" class="input-field">4</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">1</ion-col>
-        <ion-col size="3" class="ion-keypad">2</ion-col>
-        <ion-col size="3" class="ion-keypad">3</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">4</ion-col>
-        <ion-col size="3" class="ion-keypad">5</ion-col>
-        <ion-col size="3" class="ion-keypad">6</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">7</ion-col>
-        <ion-col size="3" class="ion-keypad">8</ion-col>
-        <ion-col size="3" class="ion-keypad">9</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">x</ion-col>
-        <ion-col size="3" class="ion-keypad">0</ion-col>
-        <ion-col size="3" class="ion-keypad">></ion-col>
-      </ion-row>
-    </div>
-  </ion-grid>
-</ion-content> -->
+          <div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ion-content [fullscreen]="true">
-  <div class="container">
-    <ion-grid (click)="slideDown()">
-      <ion-row>
-        <ion-col size="12">
-          <div class="svg">
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.06 97.93"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}</style><linearGradient id="linear-gradient" x1="25.83" y1="85.04" x2="95.89" y2="85.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#37a9e5"/><stop offset="1" stop-color="#3d53b9"/></linearGradient><linearGradient id="linear-gradient-2" x1="48.64" y1="98.97" x2="73.09" y2="98.97" xlink:href="#linear-gradient"/></defs><path class="cls-1" d="M92.22,84.34a3.67,3.67,0,0,0,3.67-3.68v-13a3.67,3.67,0,0,0-3.67-3.68H83.57V58.78a22.71,22.71,0,1,0-45.41,0v5.16H29.51a3.68,3.68,0,0,0-3.68,3.67h0v62.71A3.67,3.67,0,0,0,29.51,134H92.22a3.67,3.67,0,0,0,3.67-3.67V97.47a3.68,3.68,0,1,0-7.35,0v29.18H33.19V71.29H88.54v9.37A3.68,3.68,0,0,0,92.22,84.34Zm-16-20.4H45.51V58.78a15.36,15.36,0,0,1,30.71,0Z" transform="translate(-25.83 -36.07)"/><path class="cls-2" d="M72.52,87.89a12.22,12.22,0,1,0-15.33,15.33v11.71a3.68,3.68,0,0,0,7.35,0V103.22A12.22,12.22,0,0,0,72.52,87.89ZM60.91,96.43h-.1a4.79,4.79,0,1,1,.1,0Z" transform="translate(-25.83 -36.07)"/></svg>
-          </div>
-        </ion-col>
-        <ion-col size="12">
-          <h4 class="pin-heading">Forgotten your PIN ?</h4>
-          <p>No worries! We will send you a reset.</p>
-
-          <div class="input-align">
-            <input class="input" type="text" placeholder="Email or Mobile">
-            <div class="send-btn">send request</div>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-  <ion-grid id="container-card" [ngStyle]="{'min-height':slide, 'transition-duration': trans}" (click)="slideUp()">
-    <ion-row>
-      <ion-col>
-        <p class="card-line"></p>
-      </ion-col>
-    </ion-row>
-    <div class="card-padding">
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="2" class="input-field">1</ion-col>
-        <ion-col size="2" class="input-field">2</ion-col>
-        <ion-col size="2" class="input-field">3</ion-col>
-        <ion-col size="2" class="input-field">4</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">1</ion-col>
-        <ion-col size="3" class="ion-keypad">2</ion-col>
-        <ion-col size="3" class="ion-keypad">3</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">4</ion-col>
-        <ion-col size="3" class="ion-keypad">5</ion-col>
-        <ion-col size="3" class="ion-keypad">6</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">7</ion-col>
-        <ion-col size="3" class="ion-keypad">8</ion-col>
-        <ion-col size="3" class="ion-keypad">9</ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="3" class="ion-keypad">x</ion-col>
-        <ion-col size="3" class="ion-keypad">0</ion-col>
-        <ion-col size="3" class="ion-keypad">></ion-col>
-      </ion-row>
-    </div>
-  </ion-grid>
 </ion-content>

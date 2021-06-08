@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">dashback</string>
+    <string name="title_activity_main">dashback</string>
+    <string name="package_name">dashback.in</string>
+    <string name="custom_url_scheme">dashback.in</string>
+</resources>

@@ -14,7 +14,7 @@ innerpadding = "0px";
   constructor() {}
 
   slideUp(){
-    this.outerslide = '90vh';
+    this.outerslide = '88vh';
     this.innerslide = '74vh';
     this.innerpadding = '20px';
   }

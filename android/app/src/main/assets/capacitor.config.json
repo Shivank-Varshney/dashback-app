@@ -1,0 +1,6 @@
+{
+	"appId": "in.dashback.app",
+	"appName": "dashback",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
