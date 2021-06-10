@@ -3,14 +3,14 @@
     <ion-grid>
       <ion-row>
         <ion-col size="2">
-          <div class="small-img"></div>
+          <div [ngClass]="small"></div>
         </ion-col>
         <ion-col size="8" class="dashboard-heading">
           dashback
         </ion-col>
         <ion-col size="2">
           <div class="img-outer-div">
-            <img src="../../assets/dots.svg" class="dots" alt="">
+            <img src="../../assets/dots.svg" class="dots" alt="" (click)="slideDown()">
           </div>
         </ion-col>
       </ion-row>
