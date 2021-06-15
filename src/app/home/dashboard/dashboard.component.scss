@@ -17,9 +17,12 @@
     }
 }
 .ad-sense{
-  background-color: rgba(128, 128, 128, 0.377);
-  height: 10rem;
+  min-height: 10rem;
   margin: 40px 0;
+  img{
+    position: relative;
+    background-size: cover;
+  }
 }
 .utility-heading{
   color: #000;
@@ -55,7 +58,7 @@
    }
 }
 .ad-sense{
-  height: 9rem;
+  min-height: 9rem;
 }
 .utility-heading{
   font-size: 1.4rem;
@@ -80,7 +83,7 @@
    }
 }
 .ad-sense{
-  height: 8rem;
+  min-height: 8rem;
 }
 .utility-heading{
   font-size: 1.2rem;
@@ -105,7 +108,7 @@
    }
 }
 .ad-sense{
-  height: 7rem;
+  min-height: 7rem;
 }
 .utility-heading{
   font-size: 1rem;
@@ -131,7 +134,7 @@
    }
 }
 .ad-sense{
-  height: 6rem;
+  min-height: 4rem;
 }
 .utility-heading{
   font-size: 0.8rem;

@@ -1,10 +1,9 @@
 <ion-content [fullscreen]="true">
   <div id="container">
+    <div [ngClass]="big" style="transition-duration: 1s;"></div>
     <ion-grid>
       <ion-row>
-        <ion-col size="2">
-          <div [ngClass]="small"></div>
-        </ion-col>
+        <ion-col size="2"></ion-col>
         <ion-col size="8" class="dashboard-heading">
           dashback
         </ion-col>
@@ -12,11 +11,6 @@
           <div class="img-outer-div">
             <img src="../../assets/dots.svg" class="dots" alt="" (click)="slideDown()">
           </div>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12"> 
-          <div class="big-img"></div>
         </ion-col>
       </ion-row>
       <ion-row>
