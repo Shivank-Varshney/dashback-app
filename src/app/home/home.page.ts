@@ -12,7 +12,7 @@ outertrans = '1s';
 innerslide = '0vh';
 innertrans = '1s';
 innerpadding = "0px";
-small = "";
+big = "big-img";
 name = localStorage.getItem("name");
 mobile = localStorage.getItem("number")
   constructor(private router : Router) {}
@@ -21,13 +21,13 @@ mobile = localStorage.getItem("number")
     this.outerslide = '88vh';
     this.innerslide = '74vh';
     this.innerpadding = '20px';
-    this.small = "small-img";
+    this.big = "small-img";
   }
   slideDown(){
     this.outerslide = '90px';
     this.innerslide = '0vh';
     this.innerpadding = '0px';
-    this.small = "";
+    this.big = "big-img";
   }
   logout(){
     localStorage.removeItem("name")
