@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardGuard } from './auth/auth-guard.guard';
+import { LoginGuard } from './auth/login.guard';
+import { SplashGuard } from './auth/splash.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuardGuard]
   },
   {
     path: '',
@@ -13,20 +17,24 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    canActivate: [LoginGuard]
   },
   {
     path: 'splash',
-    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule),
+    canActivate: [SplashGuard]
   },
   {
-    path: 'regi',
-    loadChildren: () => import('./regi/regi.module').then( m => m.RegiPageModule)
+    path: 'register',
+    loadChildren: () => import('./regi/regi.module').then( m => m.RegiPageModule),
+    canActivate: [LoginGuard]
   },
-  // {
-  //   path: 'regi/:mob',
-  //   loadChildren: () => import('./regi/regi.module').then(m => m.RegiPageModule)
-  // },
+  {
+    path: 'register/:mob',
+    loadChildren: () => import('./regi/regi.module').then(m => m.RegiPageModule),
+    canActivate:[LoginGuard]
+  },
 ];
 
 @NgModule({

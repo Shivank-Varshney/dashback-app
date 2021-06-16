@@ -22,6 +22,7 @@
           <p class="card-line"></p>
           <div>
             <form [formGroup]="regiF" (ngSubmit)="register()">
+              <p style="color: red; text-align: center; margin-bottom: 5px;">{{msg}}</p>
               <ion-item lines="Center" class="input-field">
                 <ion-label class="label" position="floating">Name</ion-label>
                 <ion-input type="text" required formControlName="name"></ion-input>
@@ -47,24 +48,19 @@
                 <ion-input type="password" required formControlName="pass"></ion-input>
               </ion-item>
 
-              <ion-item lines="Center" class="input-field">
-                <ion-label class="label" position="floating">Re-enter Password</ion-label>
-                <ion-input type="password" required formControlName="rePass"></ion-input>
-              </ion-item>
-
-              <ion-item lines="Center" class="input-field">
+              <ion-item lines="Center" class="input-field" *ngIf="sponser ==  true">
                 <ion-label class="label" position="floating">Sponsor Number</ion-label>
                 <ion-input type="text" required formControlName="sponsorNo"></ion-input>
               </ion-item>
 
-              <ion-item lines="Center" class="input-field">
+              <ion-item lines="Center" class="input-field" *ngIf="sponser ==  true">
                 <ion-label class="label" position="floating">Sponsor Name</ion-label>
                 <ion-input type="text" required formControlName="S_name"></ion-input>
               </ion-item>
-          
+                <p routerLink="../login">Already registered? Login here</p>
               <ion-row>
                 <ion-col>
-                  <ion-button type="submit" class="btn" expand="block">Submit</ion-button>
+                  <ion-button type="submit" class="btn" expand="block" [disabled]="!regiF.valid">Submit</ion-button>
                 </ion-col>
               </ion-row>
             </form>

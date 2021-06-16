@@ -13,7 +13,7 @@ import { ServicePage } from './service.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ServicePageRoutingModule
+    ServicePageRoutingModule,
   ],
   declarations: [ServicePage]
 })

@@ -8,7 +8,12 @@ import { Router } from '@angular/router';
 })
 export class SplashPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    let splash = localStorage.getItem('splash');
+    if(splash === 'false'){
+      router.navigate(['home']);
+    }
+  }
 
   ngOnInit(){
     this.StartTimer();
@@ -17,11 +22,12 @@ export class SplashPage implements OnInit {
   StartTimer(){
     setTimeout(()=>{
       this.routing()
-    },10000)
+    },3500)
 
   }
 
   routing(){
+    localStorage.setItem('splash','false');
     this.router.navigate(['home'])
   }
 

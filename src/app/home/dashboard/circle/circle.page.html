@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Loacation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-card *ngFor="let r of resData;" class="card">
+        <ion-card-header (click)="tran(r.circle_Code)">
+          <img src="../../../../../assets/mobile.svg" alt="">
+          <ion-card-subtitle >{{r.circle_Name}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+</ion-content>

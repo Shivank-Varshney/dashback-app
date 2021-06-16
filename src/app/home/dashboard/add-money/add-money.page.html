@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Money</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="Center" class="input-field">
+          <ion-label class="label" position="floating">Amount</ion-label>
+          <ion-input type="text" required formControlName="amount"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" class="btn" expand="block" (click)="upi()">Add Money</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

@@ -21,22 +21,8 @@
         <ion-col>
           <p class="card-line"></p>
           <div>
-            <form [formGroup]="mobF" (ngSubmit)="checkMob()">
-              <!-- <ion-item lines="full">
-                <ion-label position="floating">Name</ion-label>
-                <ion-input type="text" required></ion-input>
-              </ion-item> -->
-          
-              <!-- <ion-item lines="full">
-                <ion-label position="floating">Email</ion-label>
-                <ion-input type="email" required></ion-input>
-              </ion-item> -->
-          
-              <!-- <ion-item lines="full">
-                <ion-label position="floating"></ion-label>
-                <ion-input type="text" required></ion-input>
-              </ion-item> -->
-          
+            <form [formGroup]="mobF" (ngSubmit)="login()">
+              
               <ion-grid>
                 <ion-row>
                   <ion-col size="12">
@@ -64,7 +50,7 @@
             
                 <ion-row>
                   <ion-col size="12">
-                    <ion-button type="submit" class="btn" expand="block">Next</ion-button>
+                    <ion-button type="submit" class="btn" expand="block">Login</ion-button>
                   </ion-col>
                 </ion-row>
               </ion-grid>

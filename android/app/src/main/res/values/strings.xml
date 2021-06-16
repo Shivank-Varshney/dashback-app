@@ -4,4 +4,5 @@
     <string name="title_activity_main">dashback</string>
     <string name="package_name">dashback.in</string>
     <string name="custom_url_scheme">dashback.in</string>
+    <string name="admob_app_id">ca-app-pub-9952398115191643~7495374033</string>
 </resources>

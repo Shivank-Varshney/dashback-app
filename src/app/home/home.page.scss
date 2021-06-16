@@ -24,37 +24,24 @@
     }
   }
   .big-img{
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    margin-left: -75px;
-    height: 150px;
-    width: 150px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 4px solid #1D1D62;
-  }
-  .small-img{
-    position: absolute;
-    top: 0;
-    left: 5px;
-    height: 42px;
-    width: 42px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 16px 0 0 10px;
-    border: 2px solid #1D1D62;
+      height: 150px;
+      width: 150px;
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 50%;
+      margin-top: 25px;
+      border: 4px solid #1D1D62;
   }
   .dashboard-profile-edit{
       text-align: center;
       font-size: 11px;
-      margin-top: 190px;
+      margin-top: 5px;
       text-transform: capitalize;
   }
   .dashboard-username{
       padding: 0 0 0 30px;
       font-size: 32px;
-      margin-top: 30px;
+      margin-top: 50px;
   }
   .dashboard-number{
       padding: 0 0 0 30px;
@@ -78,6 +65,15 @@
       padding: 0 15px;
     }
   }
+}
+.small-img{
+  height: 42px;
+  width: 42px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 16px 0 0 10px;
+  border: 2px solid #1D1D62;
+  transition-delay: 1s;
 }
 
 #navbar{

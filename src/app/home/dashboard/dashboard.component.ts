@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BackendService } from 'src/app/service/backend.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private bs: BackendService) { }
 
   ngOnInit() {}
 
+  service(type){
+    // console.log(type)
+    this.router.navigate(['home/service/'+type])
+  }
+  money(page){
+    this.router.navigate(['home/'+page])
+  }
 }

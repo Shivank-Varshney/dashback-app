@@ -1,0 +1,16 @@
+.request{
+    height: 30vh;
+    background-color: rgba(128, 128, 128, 0.253);
+    margin: 10px 0;
+    border-radius: 50px;
+    box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d1d62;
+    font-size: 24px;
+    cursor: pointer;
+    &:hover{
+        box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    }
+}
