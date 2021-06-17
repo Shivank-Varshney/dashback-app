@@ -20,4 +20,9 @@ export class DashboardComponent implements OnInit {
   money(page){
     this.router.navigate(['home/'+page])
   }
+
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400
+  };
 }
