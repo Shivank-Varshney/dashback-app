@@ -63,7 +63,35 @@ const routes: Routes = [
   {
     path: 'coming-soon',
     loadChildren: () => import('./coming-soon/coming-soon.module').then( m => m.ComingSoonPageModule)
+  },  {
+    path: 'my-team',
+    loadChildren: () => import('./my-team/my-team.module').then( m => m.MyTeamPageModule)
+  },
+  {
+    path: 'my-accounts',
+    loadChildren: () => import('./my-accounts/my-accounts.module').then( m => m.MyAccountsPageModule)
+  },
+  {
+    path: 'kyc',
+    loadChildren: () => import('./kyc/kyc.module').then( m => m.KycPageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'app-lock',
+    loadChildren: () => import('./app-lock/app-lock.module').then( m => m.AppLockPageModule)
+  },
+  {
+    path: 'policies',
+    loadChildren: () => import('./policies/policies.module').then( m => m.PoliciesPageModule)
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
   }
+
 
 ];
 

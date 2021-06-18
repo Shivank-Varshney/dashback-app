@@ -11,4 +11,8 @@ export class MoreComponent implements OnInit {
 
   ngOnInit() {}
 
+  slider(slide){
+    slide.startAutoplay();
+  }
+
 }

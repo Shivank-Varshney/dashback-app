@@ -25,4 +25,7 @@ export class DashboardComponent implements OnInit {
     initialSlide: 0,
     speed: 400
   };
+  slider(slide){
+    slide.startAutoplay();
+  }
 }

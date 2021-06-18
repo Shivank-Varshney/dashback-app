@@ -5,32 +5,33 @@
 }
 
 .ionic-col{
-    height: 15rem;
-    background-color: rgb(219, 219, 219);
-    margin-bottom: 10px;
+    margin: 4px auto;
+}
+.slider{
+    height: 25rem;
 }
 
 @media only screen and (max-width: 1080px) {
-    .ionic-col{
-        height: 13rem;
+    .slider{
+    height: 17rem;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    .ionic-col{
-        height: 11rem;
+    .slider{
+    height: 13rem;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .ionic-col{
-        height: 9rem;
+    .slider{
+    height: 9rem;
     }
 }
 
 @media only screen and (max-width: 320px) {
-    .ionic-col{
-        height: 7rem;
+    .slider{
+    height: 6rem;
     }
 }
 

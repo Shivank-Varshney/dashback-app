@@ -11,4 +11,8 @@ export class EcommComponent implements OnInit {
 
   ngOnInit() {}
 
+  slider(slide){
+    slide.startAutoplay();
+  }
+
 }

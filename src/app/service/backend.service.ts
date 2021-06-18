@@ -32,4 +32,8 @@ url = "https://backend.dashback.in/"
   fetchCircle(){
     return this.http.get(this.url+'fetchCricle');
   }
+  //fetch team
+  fetchTeam(data){
+    return this.http.get(this.url+'fetchTeam/'+data);
+  }
 }

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: #fff;
+    min-height: 100vh;
+    padding: 10px;
+    h3{
+        color: #162249;
+        padding: 40px 0 28px 20px;
+        font-size: 24px;
+        display: flex;
+        .back-icon{
+            margin-right: 20px;
+        }
+    }
+    
+    .banner{
+        height: 120px;
+        background-color: rgba(128, 128, 128, 0.219);
+        margin: 20px 10px 50px;
+    }
+
+    .input-field{
+        --background: #fff;
+        border: 1px solid #1d1d62;
+        margin-bottom: 20px;
+        padding: 0;
+        color: #000;
+        .label{
+            color: #1a4170;
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+    }
+    .submit-btn{
+        --background: #2B3E80;
+        color: #fff;
+    }
+}

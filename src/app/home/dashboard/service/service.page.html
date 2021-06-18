@@ -1,18 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Select Opreator</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-row>
-    <ion-col >
-      <ion-card *ngFor="let r of resData" class="card">
-        <ion-card-header (click)="circle(r.operator_Code,r.operator_Name)">
-          <img src="../../../../assets/mobile.svg" alt="">
-          <ion-card-subtitle >{{r.operator_Name}}</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
+    <ion-col>
+      <h3> <span routerLink="/home" ><ion-icon name="arrow-back-circle-outline"></ion-icon></span> Select your provider</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" *ngFor="let r of resData">
+      <div class="card"  (click)="circle(r.operator_Code, r.operator_Name)">
+        <div class="img">
+          <img src="../../../../assets/dnhpdcl.png" alt="">
+        </div>
+        <p>{{r.operator_Name}}</p>
+      </div>
     </ion-col>
   </ion-row>
 </ion-content>

@@ -29,4 +29,8 @@ export class CirclePage implements OnInit {
     tran(id) {
       this.router.navigate(['home/trans/'+this.type+'/'+this.name+'/'+this.oc+'/'+id])
     }
+
+    back(){
+      this.router.navigate(["/home/service/"+this.type])
+    }
 }

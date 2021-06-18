@@ -20,17 +20,34 @@
       </ion-row>
       <ion-row>
         <ion-col size="12" class="dashboard-username"> 
-          <p>Hello {{name}}</p>
+          <p>Hello, {{name}}!</p>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="12" class="dashboard-number"> 
-          <p>+91 {{mobile}}</p>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-       <ion-col size="12" class="logout-btn"> 
-         <p (click)="logout()">logout</p>
+       <ion-col>
+        <ion-list class="ion-item">
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/my-team"><img src="../../assets/my-team.svg" alt=""> &nbsp; my team </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/my-accounts"><img src="../../assets/my-account.svg" alt=""> &nbsp; my accounts</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/kyc"><img src="../../assets/kyc.svg" alt=""> &nbsp; KYC</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/change-password"><img src="../../assets/change-password.svg" alt=""> &nbsp; change password</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/app-lock"><img src="../../assets/app-lock.svg" alt=""> &nbsp; app lock</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/policies"><img src="../../assets/policies.svg" alt=""> &nbsp; policies</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label"  (click)="logout()"><img src="../../assets/logout.svg" alt=""> &nbsp; logout</ion-label>
+          </ion-item>
+        </ion-list>
        </ion-col>
      </ion-row>
     </ion-grid>

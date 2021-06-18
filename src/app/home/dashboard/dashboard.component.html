@@ -19,7 +19,7 @@
 <ion-row>
   <ion-col size="12" class="ad-sense">
     <ion-content>
-      <ion-slides class="ion-slides" pager="true" [options]="slideOpts">
+      <ion-slides class="ion-slides" #slide (ionSlidesDidLoad)="slider(slide)" pager="true" [options]="slideOpts">
         <ion-slide class="ion-slide">
           <img src="../../../assets/banner-01.jpg" alt="">
         </ion-slide>

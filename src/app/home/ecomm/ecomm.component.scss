@@ -4,6 +4,34 @@
     padding: 0;
 }
 
+.slider{
+    height: 25rem;
+}
+
+@media only screen and (max-width: 1080px) {
+    .slider{
+    height: 17rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .slider{
+    height: 13rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .slider{
+    height: 9rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .slider{
+    height: 6rem;
+    }
+}
+
 .ionic-col{
     height: 15rem;
     background-color: rgb(219, 219, 219);
