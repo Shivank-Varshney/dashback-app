@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+    min-height: 100vh;
+    padding: 10px;
+    h3{
+        color: #fff;
+        padding: 40px 0 28px 20px;
+        font-size: 24px;
+        display: flex;
+        text-transform: capitalize;
+        .back-icon{
+            margin-right: 20px;
+        }
+    }
+    
+    .banner{
+        height: 120px;
+        background-color: #fff;
+        margin: 20px 25vw 50px;
+    }
+
+    .money{
+        display: flex;
+        justify-content: center;
+        p{
+            color: #fff;
+            font-size: 36px;
+            font-weight: bolder;
+            margin-bottom: 50px;
+        }
+    }
+
+    .name{
+        color: rgba(255, 255, 255, 0.356);
+        font-size: 18px;
+        margin: 0 30px 50px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.356);
+        text-transform: capitalize;
+        padding-bottom: 5px;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        .submit-btn{
+            --background: #2B3E80;
+            color: #fff;
+        }
+    }
+}

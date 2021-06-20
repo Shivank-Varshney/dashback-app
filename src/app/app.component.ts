@@ -70,7 +70,7 @@ version
       if(this.version.version !== '1.0.2' ){
         const alert = this.alret.create({
           header: 'Version Alert',
-          message: 'You are on lower version. Update to latest version ',
+          message: 'You are on lower version. Update to latest version. ',
           buttons:[{
             text: 'Update',
             handler: ()=>{

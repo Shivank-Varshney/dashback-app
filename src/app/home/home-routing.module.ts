@@ -9,10 +9,10 @@ import { WalletComponent } from './wallet/wallet.component';
 import { ComingSoonPage } from './coming-soon/coming-soon.page';
 
 const routes: Routes = [
-  {
-    path: 'comingsoon',
-    component: ComingSoonPage
-  },
+  // {
+  //   path: 'comingsoon',
+  //   component: ComingSoonPage
+  // },
   {
     path: '',
     component: HomePage,
@@ -63,7 +63,8 @@ const routes: Routes = [
   {
     path: 'coming-soon',
     loadChildren: () => import('./coming-soon/coming-soon.module').then( m => m.ComingSoonPageModule)
-  },  {
+  },
+  {
     path: 'my-team',
     loadChildren: () => import('./my-team/my-team.module').then( m => m.MyTeamPageModule)
   },
@@ -90,7 +91,19 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },  {
+    path: 'add-money',
+    loadChildren: () => import('./wallet/add-money/add-money.module').then( m => m.AddMoneyPageModule)
+  },
+  {
+    path: 'withdraw',
+    loadChildren: () => import('./wallet/withdraw/withdraw.module').then( m => m.WithdrawPageModule)
+  },
+  {
+    path: 'help-and-support',
+    loadChildren: () => import('./help-and-support/help-and-support.module').then( m => m.HelpAndSupportPageModule)
   }
+
 
 
 ];
