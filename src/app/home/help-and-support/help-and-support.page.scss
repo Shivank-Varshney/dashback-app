@@ -19,9 +19,11 @@
         }
     }
     
-    .banner{
-        height: 120px;
-        background-color: rgba(128, 128, 128, 0.219);
-        margin: 20px 20px 10px;
+        .banner{
+        min-height: 120px;
+        margin: 20px 10px 50px;
+        img{
+            object-fit: cover;
+        }
     }
 }

@@ -20,9 +20,11 @@
     }
     
     .banner{
-        height: 120px;
-        background-color: rgba(128, 128, 128, 0.219);
-        margin: 20px 25vw 50px;
+        min-height: 120px;
+        margin: 20px 10px 50px;
+        img{
+            object-fit: cover;
+        }
     }
 
     .money{
@@ -37,7 +39,7 @@
     }
 
     .name{
-        color: rgba(0, 0, 0, 0.329);
+        color: rgba(172, 172, 172, 0.329);
         font-size: 18px;
         margin: 0 30px 50px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.329);
