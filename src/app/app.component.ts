@@ -1,6 +1,6 @@
 import { Component, NgZone, Version } from '@angular/core';
 import { Network } from '@ionic-native/network/ngx'
-import { AlertController, Platform, ToastController } from '@ionic/angular';
+import { AlertController, LoadingController, Platform, ToastController } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar } from '@capacitor/status-bar'
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
@@ -18,6 +18,7 @@ const{App} = Plugins
 })
 export class AppComponent {
 version  
+speed;
   constructor(
     private network: Network,
     private alret: AlertController,
@@ -27,7 +28,8 @@ version
     private http: HttpClient,
     private broswer: InAppBrowser,
     private zone: NgZone,
-    private router: Router
+    private router: Router,
+    private load: LoadingController
     ) {
     this.initializeApp()
   }
@@ -45,36 +47,42 @@ version
     })
     // App.addListener('appUrlOpen', (data: any) => {
     //   this.zone.run(() => {
-    //       Example url: https://beerswift.app/tabs/tab2
-    //       slug = /tabs/tab2
-    //       this.toastController.create({
-    //         message:data.url,
-    //         duration:2000
-    //       }).then((res)=>{
-    //         res.present()
-    //       })
+    //       // Example url: https://beerswift.app/tabs/tab2
+    //       // slug = /tabs/tab2
+    //       // this.toastController.create({
+    //       //   message:data.url,
+    //       //   duration:2000
+    //       // }).then((res)=>{
+    //       //   res.present()
+    //       // })
     //       const slug = data.url.split(".in").pop();
     //       if (slug) {
     //           this.router.navigateByUrl(slug);
     //       }
 
-    //       If no match, do nothing - let regular routing
-    //       logic take over
+    //       // If no match, do nothing - let regular routing
+    //       // logic take over
     //   });
     // });
   }
 
   checkVersion(){
+    // this.load.create({
+    //   message:"Please wait.... checking Version....."
+    // }).then((res)=>{
+    //   res.present()
+    // })
     return this.http.get('https://backend.dashback.in/checkVer').subscribe((res)=>{
       this.version = res
-      if(this.version.version !== '1.0.2' ){
+      this.load.dismiss()
+      if(this.version.version !== '1.1.53' ){
         const alert = this.alret.create({
           header: 'Version Alert',
           message: 'You are on lower version. Update to latest version. ',
           buttons:[{
             text: 'Update',
             handler: ()=>{
-              window.open('https://www.dashback.in/')
+              window.open('https://www.dashback.in/downloadapp')
             }
           }]
         }).then((res)=>{
@@ -96,6 +104,7 @@ version
           this.presentAlert();
         })
      }
+     
     let disconnect = await this.network.onDisconnect().subscribe(()=>{
       const toast = this.toastController.create({
         message: 'You are Ofline.',
@@ -107,6 +116,7 @@ version
     })
     let connectSubscription = await this.network.onConnect().subscribe(() => {
       setTimeout(() => {
+        this.speed = this.network.downlinkMax
         if (this.network.type !== 'none') {
           this.presentToastOn();
         }
@@ -139,7 +149,7 @@ version
 
   async presentToastOn(){
     const toast = await this.toastController.create({
-      message: 'You are Online.',
+      message: 'You are Online. ' + this.speed,
       duration: 2000
     })
     await toast.present()

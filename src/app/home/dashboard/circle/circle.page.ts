@@ -17,7 +17,6 @@ export class CirclePage implements OnInit {
       this.type = this.route.snapshot.paramMap.get("ib")
       this.name = this.route.snapshot.paramMap.get("name")
       this.oc = this.route.snapshot.paramMap.get("id")
-      console.log(this.type,this.name+"name"+this.oc)
     }
   
     ngOnInit() {
@@ -26,8 +25,8 @@ export class CirclePage implements OnInit {
         this.resData = this.resObj.data
       })
     }
-    tran(id) {
-      this.router.navigate(['home/trans/'+this.type+'/'+this.name+'/'+this.oc+'/'+id])
+    tran(id,name) {
+      this.router.navigate(['home/trans/'+this.type+'/'+this.name+'/'+this.oc+'/'+id+'/'+name])
     }
 
     back(){

@@ -1,14 +1,29 @@
 <ion-content>
   <ion-row>
     <ion-col>
-      <h3> <span routerLink="/home" ><ion-icon name="arrow-back-circle-outline"></ion-icon></span> Select your provider</h3>
+      <h3> <span routerLink="/home/dash" ><ion-icon name="arrow-back-circle-outline"></ion-icon></span> Select your provider</h3>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col size="6" *ngFor="let r of resData">
       <div class="card"  (click)="circle(r.operator_Code, r.operator_Name)">
         <div class="img">
-          <img src="../../../../assets/dnhpdcl.png" alt="">
+          <img *ngIf="type == 'Prepaid-Mobile' || type == 'Postpaid-Mobile'" src="../../../../assets/dummy icons/mobile.svg" alt="">
+          <img *ngIf="type == 'Electricity'" src="../../../../assets/dummy icons/electricity.svg" alt="">
+          <img *ngIf="type == 'DTH'" src="../../../../assets/dummy icons/dth.svg" alt="">
+          <img *ngIf="type == 'GAS' || type=='Gas Cylinder'" src="../../../../assets/dummy icons/gas.svg" alt="">
+          <img *ngIf="type == 'Water'" src="../../../../assets/dummy icons/water.svg" alt="">
+          <img *ngIf="type == 'Insurance' || type == 'Life Insurance'" src="../../../../assets/dummy icons/insurance.svg" alt="">
+          <img *ngIf="type == 'Broadband'" src="../../../../assets/dummy icons/broadband.svg" alt="">
+          <img *ngIf="type == 'Cable TV'" src="../../../../assets/dummy icons/cable.svg" alt="">
+          <img *ngIf="type == 'CHALLAN'" src="../../../../assets/dummy icons/challan.svg" alt="">
+          <img *ngIf="type == 'Loan Repayment'" src="../../../../assets/dummy icons/loan.svg" alt="">
+          <img *ngIf="type == 'Hospital'" src="../../../../assets/dummy icons/hospitals.svg" alt="">
+          <img *ngIf="type == 'Landline'" src="../../../../assets/dummy icons/landline.svg" alt="">
+          <img *ngIf="type == 'Education Fees'" src="../../../../assets/dummy icons/education fee.svg" alt="">
+          <img *ngIf="type == 'Municipal Taxes'" src="../../../../assets/dummy icons/municipal tax.svg" alt="">
+          <img *ngIf="type == 'Fastag Recharge'" src="../../../../assets/dummy icons/fastag.svg" alt="">
+          <img *ngIf="type == 'Housing Society'" src="../../../../assets/dummy icons/housing society.svg" alt="">
         </div>
         <p>{{r.operator_Name}}</p>
       </div>

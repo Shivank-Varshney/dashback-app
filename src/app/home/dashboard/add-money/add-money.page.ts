@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { WebIntent } from '@ionic-native/web-intent/ngx';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add-money',
@@ -8,19 +9,27 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./add-money.page.scss'],
 })
 export class AddMoneyPage implements OnInit {
-
-  constructor(private webIntenet: WebIntent, private toast: ToastController) { }
+addM: FormGroup
+  constructor(private webIntenet: WebIntent, private toast: ToastController, private fb: FormBuilder, private Alret: AlertController) { }
 
   ngOnInit() {
+    this.addForm();
+  }
+
+  addForm(){
+    this.addM = this.fb.group({
+      'amt':['0', Validators.required]
+    })
   }
 
   upi(){
+    let amount = this.addM.controls['amt'].value;
     const tid = this.getRandomString();
     const orderId = this.getRandomString();
-    const totalPrice = 1.00;
-    const UPI_ID = 'anmolchopra@icici';
-    const UPI_NAME = 'Anmol Chopra';
-    const UPI_TXN_NOTE = 'TEST TXN';
+    const totalPrice = amount;
+    const UPI_ID = 'open.2000211575@icici';
+    const UPI_NAME = 'Hardcipher Private Limited';
+    const UPI_TXN_NOTE = 'Dashback Wallet Recharge';
     // tslint:disable-next-line: max-line-length
     let uri = `upi://pay?pa=${UPI_ID}&pn=${UPI_NAME}&tid=${tid}&am=${totalPrice}&cu=INR&tn=${UPI_TXN_NOTE}&tr=${orderId}`;
     uri = uri.replace(' ', '+');

@@ -16,9 +16,15 @@ export class DashboardComponent implements OnInit {
   service(type){
     // console.log(type)
     this.router.navigate(['home/service/'+type])
+    // this.router.navigate(['home/coming-soon'])
   }
   money(page){
     this.router.navigate(['home/'+page])
+    // this.router.navigate(['home/coming-soon'])
+  }
+
+  refer(){
+    this.router.navigate(['home/refer'])
   }
 
   slideOpts = {

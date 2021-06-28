@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EcommComponent } from './ecomm/ecomm.component';
-import { HistoryComponent } from './history/history.component';
 import { HomePage } from './home.page';
 import { MoreComponent } from './more/more.component';
 import { WalletComponent } from './wallet/wallet.component';
@@ -37,11 +36,7 @@ const routes: Routes = [
       {
         path:'wallet',
         component:WalletComponent
-      },
-      {
-        path:'history',
-        component:HistoryComponent
-      },
+      }
     ]
   },
   {
@@ -53,7 +48,7 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/circle/circle.module').then( m => m.CirclePageModule)
   },
   {
-    path: 'trans/:ib/:id/:name/:cc/:cn',
+    path: 'trans/:ib/:name/:id/:cc/:cn',
     loadChildren: () => import('./dashboard/trans/trans.module').then( m => m.TransPageModule)
   },
   {
@@ -91,7 +86,8 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
-  },  {
+  },
+  {
     path: 'add-money',
     loadChildren: () => import('./wallet/add-money/add-money.module').then( m => m.AddMoneyPageModule)
   },
@@ -102,7 +98,29 @@ const routes: Routes = [
   {
     path: 'help-and-support',
     loadChildren: () => import('./help-and-support/help-and-support.module').then( m => m.HelpAndSupportPageModule)
+  },
+  {
+    path: 'refer',
+    loadChildren: () => import('./dashboard/refer/refer.module').then( m => m.ReferPageModule)
+  },
+  {
+    path: 'send-money',
+    loadChildren: () => import('./dashboard/send-money/send-money.module').then( m => m.SendMoneyPageModule)
+  },
+  {
+    path: 'request-money',
+    loadChildren: () => import('./dashboard/request-money/request-money.module').then( m => m.RequestMoneyPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },  {
+    path: 'successful',
+    loadChildren: () => import('./successful/successful.module').then( m => m.SuccessfulPageModule)
   }
+
+
+
 
 
 

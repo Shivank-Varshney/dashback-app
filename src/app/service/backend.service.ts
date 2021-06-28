@@ -36,4 +36,18 @@ url = "https://backend.dashback.in/"
   fetchTeam(data){
     return this.http.get(this.url+'fetchTeam/'+data);
   }
+  // Ad tran
+  adTran(data){
+    return this.http.post(this.url+'adTran',data);
+  }
+  fetchBal(data){
+    return this.http.get(this.url+'fetchBal/'+data);
+  }
+  adCount(data){
+    return this.http.get(this.url+'adCount/'+data);
+  }
+  fetchTran(data){
+    return this.http.get(this.url+'fetchTran/'+data);
+  }
 }
+

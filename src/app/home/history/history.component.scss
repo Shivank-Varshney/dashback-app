@@ -12,10 +12,8 @@ h4{
     margin-bottom: 10px;
 }
 
-.history-portion{
-  height: 65vh;
-  overflow-y: scroll;
-  .history{
+
+.history{
     background-color: rgb(224, 219, 219);
     color: #000;
     border-radius: 10px;
@@ -39,25 +37,22 @@ h4{
       }
     }
   }
-}
 
 @media only screen and (max-width: 1080px) {
   h4{
     font-size: 1.6rem;
   }
-  .history-portion{
-    .history{
-      p{
-        font-size: 1rem;
-        .date-style{
-            font-size: 0.9rem;
-        }
-        span{
-            font-size: 0.9rem;
-        }
-        .payment-arrow{
-            height: 16px;
-        }
+  .history{
+    p{
+      font-size: 1rem;
+      .date-style{
+          font-size: 0.9rem;
+      }
+      span{
+          font-size: 0.9rem;
+      }
+      .payment-arrow{
+          height: 16px;
       }
     }
   }
@@ -67,19 +62,17 @@ h4{
   h4{
     font-size: 1.4rem;
   }
-  .history-portion{
-    .history{
-      p{
-        font-size: 0.9rem;
-        .date-style{
-            font-size: 0.8rem;
-        }
-        span{
-            font-size: 0.8rem;
-        }
-        .payment-arrow{
-            height: 14px;
-        }
+  .history{
+    p{
+      font-size: 0.9rem;
+      .date-style{
+          font-size: 0.8rem;
+      }
+      span{
+          font-size: 0.8rem;
+      }
+      .payment-arrow{
+          height: 14px;
       }
     }
   }
@@ -89,19 +82,17 @@ h4{
   h4{
     font-size: 1.2rem;
   }
-  .history-portion{
-    .history{
-      p{
-        font-size: 0.8rem;
-        .date-style{
-            font-size: 0.7rem;
-        }
-        span{
-            font-size: 0.7rem;
-        }
-        .payment-arrow{
-            height: 12px;
-        }
+  .history{
+    p{
+      font-size: 0.8rem;
+      .date-style{
+          font-size: 0.7rem;
+      }
+      span{
+          font-size: 0.7rem;
+      }
+      .payment-arrow{
+          height: 12px;
       }
     }
   }
@@ -111,19 +102,17 @@ h4{
   h4{
     font-size: 1rem;
   }
-  .history-portion{
-    .history{
-      p{
-        font-size: 0.7rem;
-        .date-style{
-            font-size: 0.6rem;
-        }
-        span{
-            font-size: 0.6rem;
-        }
-        .payment-arrow{
-            height: 10px;
-        }
+  .history{
+    p{
+      font-size: 0.7rem;
+      .date-style{
+          font-size: 0.6rem;
+      }
+      span{
+          font-size: 0.6rem;
+      }
+      .payment-arrow{
+          height: 10px;
       }
     }
   }

@@ -3,15 +3,15 @@
     <img src="../../assets/add.svg" class="img-fluid" alt="" >
     <p>add</p>
   </ion-col>
-  <ion-col size="3" class="ionic-col">
+  <ion-col size="3" class="ionic-col" (click)="money('send-money')">
     <img src="../../assets/pay.svg" class="img-fluid" alt="">
     <p>pay</p>
   </ion-col>
-  <ion-col size="3" class="ionic-col">
+  <ion-col size="3" class="ionic-col" (click)="money('request-money')">
     <img src="../../assets/request.svg" class="img-fluid" alt="">
     <p>request</p>
   </ion-col>
-  <ion-col size="3" class="ionic-col">
+  <ion-col size="3" class="ionic-col" (click)="refer()">
     <img src="../../assets/refer.svg" class="img-fluid" alt="">
     <p>refer</p>
   </ion-col>
@@ -26,9 +26,9 @@
         <ion-slide class="ion-slide">
           <img src="../../../assets/banner-02.jpg" alt="">
         </ion-slide>
-        <ion-slide class="ion-slide">
+        <!-- <ion-slide class="ion-slide">
           <img src="../../../assets/banner-03.jpg" alt="">
-        </ion-slide>
+        </ion-slide> -->
         <ion-slide class="ion-slide">
           <img src="../../../assets/banner-04.jpg" alt="">
         </ion-slide>
@@ -105,7 +105,7 @@
 <ion-row >
   <ion-col size="3" class="ionic-col" (click)="service('Life Insurance')">
     <img src="../../../assets/Insurance.svg" class="utility-img" alt="">
-    <p class="utility-para">Insurance</p>
+    <p class="utility-para">Life Insurance</p>
   </ion-col>
   <ion-col size="3" class="ionic-col" (click)="service('Landline')">
     <img src="../../../assets/Landline.svg" class="utility-img" alt="">
@@ -122,7 +122,7 @@
 </ion-row>
 
 <ion-row >
-  <ion-col size="3" class="ionic-col" (click)="service('Housing Society')">
+  <ion-col size="3" class="ionic-col" (click)="service('Gas Cylinder')">
     <img src="../../../assets/gas-cylinder.svg" class="utility-img" alt="">
     <p class="utility-para">gas cylinder</p>
   </ion-col>

@@ -34,4 +34,15 @@ mobile = localStorage.getItem("number")
     localStorage.removeItem("number")
     this.router.navigate(['login'])
   }
+  social(id){
+    if(id === 'fb'){
+      window.open('https://www.facebook.com/DashBackIndia');
+    }
+    if(id === 'insta'){
+      window.open('https://www.instagram.com/dashbackindia/');
+    }
+    if(id === 'whatsapp'){
+      
+    }
+  }
 }

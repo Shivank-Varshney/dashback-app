@@ -18,24 +18,24 @@
 
       <ion-row>
         <ion-col size="12" class="dashboard-username"> 
-          <p>Hello, {{name}} Varshney!</p>
+          <p>Hello, {{name}}!</p>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col size="12" class="icon-text"> 
-          <p>Our social media handles</p>
+          <p>Connect with us on</p>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col size="12" class="icons"> 
-          <img src="../../assets/facebook.svg" class="icon" alt="">
-          <img src="../../assets/instagram.svg" class="icon" alt="">
-          <img src="../../assets/whatsapp.svg" class="icon" alt="">
-          <img src="../../assets/linkedin.svg" class="icon" alt="">
-          <img src="../../assets/telegram.svg" class="icon" alt="">
-          <img src="../../assets/twitter.svg" class="icon" alt="">
+          <img src="../../assets/facebook.svg" class="icon" alt="" (click)="social('fb')">
+          <img src="../../assets/instagram.svg" class="icon" alt="" (click)="social('insta')">
+          <img src="../../assets/whatsapp.svg" class="icon" alt="" (click)="social('whatsapp')">
+          <img src="../../assets/linkedin.svg" class="icon" alt="" (click)="social('linkedin')">
+          <img src="../../assets/telegram.svg" class="icon" alt="" (click)="social('telegram')">
+          <img src="../../assets/twitter.svg" class="icon" alt="" (click)="social('twitter')">
         </ion-col>
       </ion-row>
       
@@ -46,22 +46,25 @@
             <ion-label class="ion-label" routerLink="/home/my-team"><img src="../../assets/my-team.svg" alt=""> &nbsp; my team </ion-label>
           </ion-item>
           <ion-item>
-            <ion-label class="ion-label" routerLink="/home/my-accounts"><img src="../../assets/my-account.svg" alt=""> &nbsp; my accounts</ion-label>
+            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/my-account.svg" alt=""> &nbsp; my accounts</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label class="ion-label" routerLink="/home/kyc"><img src="../../assets/kyc.svg" alt=""> &nbsp; KYC</ion-label>
+            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/kyc.svg" alt=""> &nbsp; KYC</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label class="ion-label" routerLink="/home/edit-profile"><img src="../../assets/edit-profile.svg" alt=""> &nbsp; edit profile</ion-label>
+            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/edit-profile.svg" alt=""> &nbsp; edit profile</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label class="ion-label" routerLink="/home/change-password"><img src="../../assets/change-password.svg" alt=""> &nbsp; change password</ion-label>
+            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/change-password.svg" alt=""> &nbsp; change password</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label class="ion-label" routerLink="/home/app-lock"><img src="../../assets/app-lock.svg" alt=""> &nbsp; app lock</ion-label>
+            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/app-lock.svg" alt=""> &nbsp; app lock</ion-label>
           </ion-item>
           <ion-item>
             <ion-label class="ion-label" routerLink="/home/policies"><img src="../../assets/policies.svg" alt=""> &nbsp; policies</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-label" routerLink="/home/successful"><img src="../../assets/policies.svg" alt=""> &nbsp; successful</ion-label>
           </ion-item>
           <ion-item>
             <ion-label class="ion-label" routerLink="/home/help-and-support"><img src="../../assets/help-support.svg" alt=""> &nbsp; help and support</ion-label>

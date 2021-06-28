@@ -14,12 +14,13 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { CommonModule } from '@angular/common';
 import { WebIntent } from '@ionic-native/web-intent/ngx';
 import { AdMob } from '@capacitor-community/admob';
+import { Clipboard } from '@ionic-native/clipboard/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, HttpClientModule, CommonModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network, ScreenOrientation, InAppBrowser, WebIntent],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network, ScreenOrientation, InAppBrowser, WebIntent, Clipboard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

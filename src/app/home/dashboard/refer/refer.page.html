@@ -1,0 +1,28 @@
+<div class="container">
+
+  <ion-row>
+    <ion-col class="banner">
+      <ion-icon name="arrow-back-circle-outline" class="back-icon" routerLink="/home/dash"></ion-icon>
+      <p>Refer your friend and earn cashback </p>
+      <img src="../../../../assets/refer banner.svg" alt="">
+    </ion-col>
+  </ion-row>
+  
+  <ion-row class="refer-link">
+    <ion-col size="12">
+      <p>Earn cashback upto 5 Tiers on almost every transaction.</p>
+    </ion-col>
+
+    <ion-col size="12">
+      <h5 class="invite-heading">your invite</h5>
+    </ion-col>
+
+    <ion-col size="12">
+      <h5 class="copy-link" >{{link}}</h5>
+    </ion-col>
+
+    <ion-col size="12">
+      <div class="share-btn" (click)="copy(link)">Copy</div>
+    </ion-col>
+  </ion-row>
+</div>
