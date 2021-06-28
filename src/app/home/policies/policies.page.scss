@@ -13,6 +13,7 @@
         font-size: 24px;
         display: flex;
         text-transform: capitalize;
+        font-family: "s-semi-bold", sans-serif;
         .back-icon{
             margin-right: 20px;
         }
@@ -37,6 +38,7 @@
             font-size: 22px;
             font-weight: bolder;
             margin: 15px 0;
+            font-family: "s-bold", sans-serif;
         }
         h3{
             font-size: 20px;
@@ -51,6 +53,7 @@
         p{
             font-size: 15px;
             margin-bottom: 15px;
+            font-family: "s-regular", sans-serif;
         }
     }
 }

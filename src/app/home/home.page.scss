@@ -8,13 +8,14 @@
   min-height: 100vh;
   background-image: linear-gradient(to right, #37A7E6, #3D54BA);
   color: #fff;
-  padding: 10px 0 0 0;
+  padding: 15px 0 0 0;
   .dashboard-heading{
       text-align: center;
       text-transform: uppercase;
       font-weight: bolder;
-      font-size: 28px;
-      margin-top: 20px;
+      font-size: 34px;
+      margin-top: 12px;
+      font-family: "s-bold", sans-serif;
   }
   .img-outer-div{
     display: flex;
@@ -27,7 +28,7 @@
   }
   .big-img{
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 50%;
     margin-left: -70px;
     height: 140px;
@@ -37,7 +38,7 @@
   }
   .small-img{
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: 5px;
     height: 34px;
     width: 34px;
@@ -48,14 +49,16 @@
   .dashboard-username{
       text-align: center;
       padding: 0 0 0 30px;
-      font-size: 22px;
+      font-size: 24px;
       margin: 190px 0 20px 0;
       text-transform: capitalize;
+      font-family: "s-semi-bold", sans-serif;
   }
   .icon-text{
     text-align: center;
     margin: 0 0 15px 0;
     font-size: 12px;
+    font-family: "s-regular", sans-serif;
   }
   .icons{
     display: flex;
@@ -68,8 +71,8 @@
   }
   .ion-item{
     --ion-item-background: transparent;
-    min-height: 30vh;
-    max-height: 35vh;
+    min-height: 25vh;
+    max-height: 30vh;
     overflow-y: scroll;
     padding: 0 0 50px 0;
     .ion-label{
@@ -77,6 +80,7 @@
       text-transform: capitalize;
       cursor: pointer;
       font-size: 16px;
+      font-family: "s-semi-bold", sans-serif;
       img{
         height: 14px;
       }
