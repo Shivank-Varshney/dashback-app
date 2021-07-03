@@ -85,6 +85,23 @@
         height: 14px;
       }
     }
+    .ion-label-premium{
+      text-transform: capitalize;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: "s-semi-bold", sans-serif;
+      animation: blink 3s infinite;
+      img{
+        height: 14px;
+      }
+    }
+    @keyframes blink{
+      0% {color: #F6961E;}
+      25% {color: #fff;}
+      50% {color: #F6961E;}
+      75% {color: #fff;}
+      100% {color: #F6961E;}
+    }
   }
 }
 

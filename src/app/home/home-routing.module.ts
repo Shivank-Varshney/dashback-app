@@ -121,6 +121,10 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'premium',
+    loadChildren: () => import('./premium/premium.module').then( m => m.PremiumPageModule)
   }
 
 

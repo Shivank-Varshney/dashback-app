@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+    min-height: 100vh;
+    .main{
+        background-image: url(../../../assets/premium-bg.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 50vh;
+        h4{
+            margin-top: 27px;
+            font-size: 32px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "s-bold", sans-serif;
+        }
+        p{
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-family: "s-bold", sans-serif;
+            color: #F6961E;
+            font-weight: bold;
+            margin: -5px 0 0 90px;
+        }
+    }
+    .card{
+        background-color: #fff;
+        color: #000;
+        height: 50vh;
+        border-radius: 60px 60px 0 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        .heading{
+            text-transform: capitalize;
+            align-self: flex-start;
+            font-family: "s-semi-bold";
+            font-size: 34px;
+        }
+        .text{
+            margin-top: -55px;
+            word-break: break-all;
+            font-family: "s-regular", "sans-serif";
+            align-self: flex-start;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .btn{
+            background-image: linear-gradient(to right, #F9C124, #F6961E);
+            font-family: "s-semi-bold", "sans-serif";
+            text-transform: capitalize;
+            padding: 15px 60px;
+            color: #272266;
+            border-radius: 40px;
+            font-size: 22px
+        }
+    }
+}
