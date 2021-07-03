@@ -75,7 +75,7 @@ speed;
     return this.http.get('https://backend.dashback.in/checkVer').subscribe((res)=>{
       this.version = res
       this.load.dismiss()
-      if(this.version.version !== '1.1.53' ){
+      if(this.version.version !== '1.1.503' ){
         const alert = this.alret.create({
           header: 'Version Alert',
           message: 'You are on lower version. Update to latest version. ',

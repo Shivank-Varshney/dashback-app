@@ -117,6 +117,10 @@ const routes: Routes = [
   },  {
     path: 'successful',
     loadChildren: () => import('./successful/successful.module').then( m => m.SuccessfulPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
   }
 
 
