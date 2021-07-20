@@ -34,6 +34,14 @@ const routes: Routes = [
     path: 'register/:mob',
     loadChildren: () => import('./regi/regi.module').then(m => m.RegiPageModule),
     canActivate:[LoginGuard]
+  },
+  {
+    path: 'otp',
+    loadChildren: () => import('./otp/otp.module').then( m => m.OtpPageModule)
+  },
+  {
+    path: 'pin',
+    loadChildren: () => import('./pin/pin.module').then( m => m.PinPageModule)
   }
 ];
 
