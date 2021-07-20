@@ -4,7 +4,7 @@
     <ion-col>
       <h3>
         <ion-icon name="arrow-back-circle-outline" class="back-icon" routerLink="/home/dash"></ion-icon>
-        Recharge
+        Recharge/Bill Payment
       </h3> 
     </ion-col>
   </ion-row>
@@ -28,8 +28,8 @@
       <ion-row>
         <ion-col>
           <ion-item lines="Center" class="input-field">
-            <ion-label class="label" position="floating">Mobile No.</ion-label>
-            <ion-input type="tel" required formControlName="number"></ion-input>
+            <ion-label class="label" position="floating">Enter {{opName || "Account No"}}</ion-label>
+            <ion-input type="tel" required formControlName="number" ></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>

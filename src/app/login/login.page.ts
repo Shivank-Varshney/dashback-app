@@ -48,6 +48,7 @@ resData;
         this.router.navigate(['home'])
         localStorage.setItem('name',this.resData.data.name);
         localStorage.setItem('number',this.resData.data.mobile);
+        localStorage.setItem('id',this.resData.data.id)
       }
     })
   }

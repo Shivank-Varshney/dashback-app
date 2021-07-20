@@ -2,27 +2,31 @@
   <ion-row>
     <ion-col>
       <h3>
-        <ion-icon name="arrow-back-circle-outline" class="back-icon" routerLink="/home"></ion-icon>
+        <ion-icon
+          name="arrow-back-circle-outline"
+          class="back-icon"
+          routerLink="/home"
+        ></ion-icon>
         edit profile
       </h3>
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col class="banner"></ion-col>
+    <ion-col size="12" class="img-align">
+      <img src="../../../assets/profile.svg" class="profile" alt="" />
+    </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col>
-      <ion-item class="input-field">
-        <ion-label class="label" position="floating">name</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-      <ion-item class="input-field">
-        <ion-label class="label" position="floating">email</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-      <ion-button type="submit" class="submit-btn">Submit</ion-button>  
+    <ion-col size="10">
+      <input type="text" class="input-field" placeholder="Enter your name" />
+    </ion-col>
+    <ion-col size="10">
+      <input type="email" class="input-field" placeholder="Enter your email" />
+    </ion-col>
+    <ion-col size="12" class="save-btn">
+      <button class="btn">Save</button>
     </ion-col>
   </ion-row>
 </div>

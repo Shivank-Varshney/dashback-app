@@ -1,130 +1,133 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-.container{
-    padding: 4vh 5vw 5vh 5vw;
-    background-color: white;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  
-h3{
+
+.container {
+  padding: 4vh 5vw 5vh 5vw;
+  background-color: white;
+}
+
+h3 {
   color: #162249;
   padding: 40px 0 28px 20px;
   font-size: 24px;
   display: flex;
   text-transform: capitalize;
   font-family: "s-semi-bold", sans-serif;
-  .back-icon{
-      margin-right: 20px;
+  .back-icon {
+    margin-right: 20px;
   }
 }
-  
-  .history-portion{
-    height: 80vh;
-    overflow-y: scroll;
-    justify-content: center;
-    .history{
-      background-color: #D8E5EB;
-      color: #000;
-      border-radius: 10px;
-      padding: 20px 15px;
-      display: flex;
-      justify-content: space-between;
-      margin: 5px 0;
-      p{
-        text-transform: capitalize;
-        font-size: 1.2rem;
-        line-height: 1rem;
-        font-weight: bolder;
-        line-height: 20px;
-        .date-style{
-          text-transform: lowercase;
-          font-size: 1.1rem;
-        }
-        span{
-          font-size: 1.1rem;
-        }
-        .payment-arrow{
-          height: 18px;
-        }
+
+.history-portion {
+  height: 80vh;
+  overflow-y: scroll;
+  justify-content: center;
+  .history {
+    background-image: linear-gradient(to right, #37a7e6, #3d54ba);
+    color: #000;
+    border-radius: 10px;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    p {
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      line-height: 1rem;
+      font-weight: bolder;
+      line-height: 20px;
+      .date-style {
+        color: #000;
+        text-transform: lowercase;
+        font-size: 1.1rem;
+      }
+      span {
+        font-size: 1.1rem;
+        color: #000;
+      }
+      .payment-arrow {
+        height: 18px;
       }
     }
   }
-  
-  @media only screen and (max-width: 1080px) {
-    .history-portion{
-      .history{
-        p{
-          font-size: 1rem;
-          .date-style{
-              font-size: 0.9rem;
-          }
-          span{
-              font-size: 0.9rem;
-          }
-          .payment-arrow{
-              height: 16px;
-          }
-        }
-      }
-    }
-  }
-  
-  @media only screen and (max-width: 720px) {
-    .history-portion{
-      .history{
-        p{
+}
+
+@media only screen and (max-width: 1080px) {
+  .history-portion {
+    .history {
+      p {
+        font-size: 1rem;
+        .date-style {
           font-size: 0.9rem;
-          .date-style{
-              font-size: 0.8rem;
-          }
-          span{
-              font-size: 0.8rem;
-          }
-          .payment-arrow{
-              height: 14px;
-          }
+        }
+        span {
+          font-size: 0.9rem;
+        }
+        .payment-arrow {
+          height: 16px;
         }
       }
     }
   }
-  
-  @media only screen and (max-width: 420px) {
-    .history-portion{
-      .history{
-        p{
+}
+
+@media only screen and (max-width: 720px) {
+  .history-portion {
+    .history {
+      p {
+        font-size: 0.9rem;
+        .date-style {
           font-size: 0.8rem;
-          .date-style{
-              font-size: 0.7rem;
-          }
-          span{
-              font-size: 0.7rem;
-          }
-          .payment-arrow{
-              height: 12px;
-          }
+        }
+        span {
+          font-size: 0.8rem;
+        }
+        .payment-arrow {
+          height: 14px;
         }
       }
     }
   }
-  
-  @media only screen and (max-width: 320px) {
-    .history-portion{
-      .history{
-        p{
+}
+
+@media only screen and (max-width: 420px) {
+  .history-portion {
+    .history {
+      p {
+        font-size: 0.8rem;
+        .date-style {
           font-size: 0.7rem;
-          .date-style{
-              font-size: 0.6rem;
-          }
-          span{
-              font-size: 0.6rem;
-          }
-          .payment-arrow{
-              height: 10px;
-          }
+        }
+        span {
+          font-size: 0.7rem;
+        }
+        .payment-arrow {
+          height: 12px;
         }
       }
     }
   }
+}
+
+@media only screen and (max-width: 320px) {
+  .history-portion {
+    .history {
+      p {
+        font-size: 0.7rem;
+        .date-style {
+          font-size: 0.6rem;
+        }
+        span {
+          font-size: 0.6rem;
+        }
+        .payment-arrow {
+          height: 10px;
+        }
+      }
+    }
+  }
+}

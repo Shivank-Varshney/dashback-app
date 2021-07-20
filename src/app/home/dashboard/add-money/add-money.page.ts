@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { WebIntent } from '@ionic-native/web-intent/ngx';
 import { AlertController, ToastController } from '@ionic/angular';
+import { BackendService } from 'src/app/service/backend.service';
 
 @Component({
   selector: 'app-add-money',
@@ -10,7 +12,11 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class AddMoneyPage implements OnInit {
 addM: FormGroup
-  constructor(private webIntenet: WebIntent, private toast: ToastController, private fb: FormBuilder, private Alret: AlertController) { }
+mobile = localStorage.getItem("number")
+name = localStorage.getItem("name")
+resData;
+  constructor(private webIntenet: WebIntent, private toast: ToastController, private fb: FormBuilder, 
+              private Alret: AlertController,private bs: BackendService, private router: Router) { }
 
   ngOnInit() {
     this.addForm();
@@ -18,7 +24,9 @@ addM: FormGroup
 
   addForm(){
     this.addM = this.fb.group({
-      'amt':['0', Validators.required]
+      'amt':['', Validators.required,],
+      'mobile':this.mobile,
+      'name': this.name
     })
   }
 
@@ -43,6 +51,9 @@ addM: FormGroup
             intent.extras.resultCode === (window as any).plugins.intentShim.RESULT_OK &&
             intent.extras.Status &&
             (((intent.extras.Status as string).toLowerCase()) === ('success'))) {
+              // console.log(intent.extras)
+              // let a = intent.extras.UTR
+              // let b = intent.extras
           this.paymentSuccess(orderId, 'UPI');
         } else {
           alert('payment failed');
@@ -64,5 +75,20 @@ addM: FormGroup
 
   paymentSuccess(orderId: string, paymentMethod: string) {
     alert(`Payment successful Order Id ${orderId} payment method ${paymentMethod}`);
+    this.add();
+  }
+
+  add(){
+    let formData = this.addM.getRawValue()
+    let serilize = formData
+    this.bs.addWalletAmount(serilize).subscribe((res)=>{
+      this.resData = res
+      console.log(res)
+      if(this.resData.err == 0){
+        let type = "Funds successfully added."
+        let amt = serilize.amt
+        this.router.navigate(['/home/successful/'+type+'/'+amt])
+      }
+    })
   }
 }

@@ -3,7 +3,7 @@
     <ion-col size="12">
       <h3>
         <ion-icon name="arrow-back-circle-outline" class="back-icon" routerLink="/home"></ion-icon>
-        select your tier
+        Select Your Tier
       </h3>
     </ion-col>
   </ion-row>
@@ -96,6 +96,12 @@
 
 
 
+
+
+
+
+
+
 <div class="container2" *ngIf="tierView == false">
   <ion-row>
     <ion-col size="12">
@@ -107,46 +113,47 @@
   </ion-row>
 
   <ion-row>
-    <!-- <ion-col>
+    <ion-col>
       <div class="search-bar">
-        <ion-item class="input-field">
-          <ion-label class="label" position="floating">search</ion-label>
-          <ion-input type="search" placeholder="Name or number"></ion-input>
-        </ion-item>
-        <ion-button type="submit" class="submit-btn">
-          <ion-icon name="search-outline"></ion-icon>
-        </ion-button>  
+        <form [formGroup]="search" (ngSubmit)="find()">
+          <div class="input-field">
+          <input type="search" class="input-box" placeholder="Enter your name" formControlName = "search"  />
+          <button type="submit" class="submit-btn">
+            <ion-icon class="icon" name="search-outline"></ion-icon>
+          </button>
+          </div> 
+        </form> 
       </div>
-    </ion-col> -->
+    </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
       <div class="card">
-        <div class="card-header">
+        <div [ngClass]="'card-header'">
           <div class="img"></div>
-          <h3>Tier 1</h3>
+          <h3>Tier {{tierNo}}</h3>
         </div>
         <div class="body">
           <p>Team Size : {{tierData?.length}}</p>
-          <p>Utility earning : {{totalVal}}</p>
-          <p>Account earning : </p>
-          <p>E-commerce earning : </p>
-          <p>Ad earning: </p>
+          <p>Total Utility Cashback : {{totalVal}}</p>
+          <p>Total Account Cashback : </p>
+          <p>Total E-commerce Cashback : </p>
+          <p>Total Ad Cashback: </p>
         </div>
       </div>
     </ion-col>
     <ion-col>
-      <div class="card" *ngFor="let r of tierData">
-        <div class="card-header">
+      <div  *ngFor="let r of tierData" [ngClass]="{'card':r.account === null || 'Basic' ,'Premium':r.account == 'Premium'}">
+        <div  class="card-header">
           <div class="img"></div>
           <h3>{{r.name}}</h3>
         </div>
         <div class="body">
-          <p>Utility earning : {{r.earning.utility}}</p>
-          <p>Account earning : {{r.earning.demat}}</p>
-          <p>E-commerce earning : {{r.earning.eComm}}</p>
-          <p>Ad earning: {{r.earning.ad}}</p>
+          <p>Utility Cashback : {{r.earning.utility}}</p>
+          <p>Account Cashback : {{r.earning.demat}}</p>
+          <p>E-commerce Cashback : {{r.earning.eComm}}</p>
+          <p>Ad Cashback: {{r.earning.ad}}</p>
         </div>
       </div>
     </ion-col>

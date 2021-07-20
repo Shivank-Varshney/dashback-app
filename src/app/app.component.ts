@@ -67,30 +67,38 @@ speed;
   }
 
   checkVersion(){
-    // this.load.create({
-    //   message:"Please wait.... checking Version....."
-    // }).then((res)=>{
-    //   res.present()
-    // })
+    this.load.create({
+      message:`Please wait.... <br>checking Version.....`
+    }).then((res)=>{
+      res.present()
+    })
     return this.http.get('https://backend.dashback.in/checkVer').subscribe((res)=>{
       this.version = res
       this.load.dismiss()
-      if(this.version.version !== '1.1.503' ){
+      if(this.version.version !== '1.1.560' ){
         const alert = this.alret.create({
           header: 'Version Alert',
           message: 'You are on lower version. Update to latest version. ',
           buttons:[{
             text: 'Update',
             handler: ()=>{
-              window.open('https://www.dashback.in/downloadapp')
+              window.open('https://bit.ly/3xEs54N')
             }
           }]
         }).then((res)=>{
-          res.present()
-          res.onDidDismiss().then(()=>{
-            navigator['app'].exitApp()
-          })
+          setTimeout(()=>{
+            res.present()
+            this.load.dismiss()
+            res.onDidDismiss().then(()=>{
+              navigator['app'].exitApp()
+            })
+          },2000)
         })
+      }
+      else{
+        setTimeout(()=>{
+          this.load.dismiss()
+        },2000);
       }
     })
   }

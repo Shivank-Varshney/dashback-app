@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // user-select: none;
+}
+
+#container{
+        overflow-x: scroll;
+        .input-field{
+            --background: #fff;
+            border: 1px solid #1d1d62;
+            margin-bottom: 20px;
+            padding: 0;
+            color: #000;
+            .label{
+                color: rgb(82, 79, 79);
+            }
+        }
+        p{
+            text-align: center;
+            cursor: pointer;
+            color: #1d1d62;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .btn{
+            margin-top: 16px;
+            --background: #1d1d62;
+        }
+}

@@ -1,32 +1,50 @@
+<div class="container">
+  <ion-row>
+    <ion-col>
+      <h3>
+        <ion-icon
+          name="arrow-back-circle-outline"
+          class="back-icon"
+          routerLink="/home/dash"
+        ></ion-icon>
+        transaction history
+      </h3>
+    </ion-col>
+  </ion-row>
 
-  <div class="container">
+  <ion-grid class="history-portion">
     <ion-row>
-      <ion-col>
-        <h3>
-          <ion-icon name="arrow-back-circle-outline" class="back-icon" routerLink="/home/dash"></ion-icon>
-          transaction history
-        </h3>
+      <ion-col *ngFor="let r of resData " size="12">
+        <ion-row>
+          <ion-col size="12">
+            <div class="history">
+              <p>
+                {{r.transName}} <br />
+                <span class="date-style"
+                  >{{r.date | date: 'dd/MM/yyyy HH:mm'}}</span
+                >
+              </p>
+              <strong>
+                <p>
+                  <span>₹{{r.amt}}</span> <br />
+                  <img
+                    src="../../../assets/up.svg"
+                    alt=""
+                    class="payment-arrow ion-margin-end"
+                    *ngIf=" r.tranType == 'credit' "
+                  />
+                  <img
+                    src="../../../assets/down.svg"
+                    alt=""
+                    class="payment-arrow ion-margin-end"
+                    *ngIf=" r.tranType == 'Debit' "
+                  />
+                </p>
+              </strong>
+            </div>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
-    
-    <ion-grid class="history-portion">
-    <ion-row>
-        <ion-col *ngFor="let r of resData " size="12">
-          <ion-row>
-            <ion-col size="12">
-              <div class="history">
-                <p>{{r.transName}} <br> <span class="date-style">{{r.date | date: 'dd/MM/yyyy HH:mm'}}</span></p>
-                <strong>
-                  <p>
-                     
-                    <span>₹</span>{{r.amt}} <br>
-                    <img src="../../../assets/up.svg" alt="" class="payment-arrow ion-margin-end">
-                  </p>
-                </strong>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-    </ion-row>
-    </ion-grid>
-  </div>
+  </ion-grid>
+</div>

@@ -18,16 +18,19 @@ export class HistoryPage implements OnInit {
   }
 
   async fetch(){
-    // this.load.create({
-    //   message:'Loading....'
-    // }).then((resp)=>{
-    //   resp.present()
-    // })
+    this.load.create({
+      message:'Loading....'
+    }).then((resp)=>{
+      resp.present()
+    })
     this.bs.fetchTran(this.mobile).subscribe((res)=>{
       this.resObj = res
       this.resData = this.resObj.data
       this.load.dismiss()
-      console.log(this.resData)
+      // console.log(this.resData)
+      setTimeout(()=>{
+        this.load.dismiss()
+      },5000)
     })
   }
 }

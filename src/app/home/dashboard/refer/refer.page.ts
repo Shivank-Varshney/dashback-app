@@ -8,15 +8,15 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./refer.page.scss'],
 })
 export class ReferPage implements OnInit {
-mobile= localStorage.getItem('number')
+id= localStorage.getItem('id')
 link=""
   constructor(private clip: Clipboard, private toast: ToastController) {
-    this.link ="https://www.dashback.in/register/"+this.mobile
+    this.link ="https://www.dashback.in/register/"+this.id
    }
 
   ngOnInit() {
   }
-  copy(inputElement){
+  copy(){
     this.clip.copy(this.link)
     this.toast.create({
       message: 'Link copied....',

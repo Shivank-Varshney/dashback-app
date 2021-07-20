@@ -1,13 +1,17 @@
 <ion-content [fullscreen]="true">
   <div id="container">
     <div [ngClass]="big" style="transition-duration: 1s;">
-      <img src="../../assets/profile.svg" alt="">
+      <img *ngIf="premium == true" src="../../assets/profile.svg" alt="">
+      <img *ngIf="premium == false" src="../../assets/premium-profile.svg" alt="">
     </div>
     <ion-grid>
       <ion-row>
         <ion-col size="2"></ion-col>
         <ion-col size="8" class="dashboard-heading">
-          dashback
+          <div class="main">
+            <h4>dashback</h4>
+            <p *ngIf="premium == false">premium</p>
+          </div>
         </ion-col>
         <ion-col size="2">
           <div class="img-outer-div">
@@ -17,8 +21,13 @@
       </ion-row>
 
       <ion-row>
-        <ion-col size="12" class="dashboard-username"> 
-          <p>Hello, {{name}}!</p>
+        <ion-col size="6"></ion-col>
+        <ion-col size="6" [ngClass]="{'dashboard-username': premium == true, 'premium-username': premium == false}"> 
+          <h5>Hello, {{name}}</h5>
+          <div class="edit">
+            <p routerLink="/home/edit-profile">edit profile</p>
+            <p routerLink="/home/change-password">change password</p>
+          </div>
         </ion-col>
       </ion-row>
 
@@ -29,9 +38,18 @@
       </ion-row>
 
       <ion-row>
-        <ion-col size="12" class="icons"> 
+        <ion-col size="12" class="icons" *ngIf="premium == false"> 
+          <img src="../../assets/facebook-p.svg" class="icon" alt="" (click)="social('fb')">
+          <img src="../../assets/Instagram-p.svg" class="icon" alt="" (click)="social('insta')">
+          <img src="../../assets/whatsapp-p.svg" class="icon" alt="" (click)="social('whatsapp')">
+          <img src="../../assets/linkedin-p.svg" class="icon" alt="" (click)="social('linkedin')">
+          <img src="../../assets/telegram-p.svg" class="icon" alt="" (click)="social('telegram')">
+          <img src="../../assets/twitter-p.svg" class="icon" alt="" (click)="social('twitter')">
+        </ion-col>
+
+        <ion-col size="12" class="icons" *ngIf="premium == true"> 
           <img src="../../assets/facebook.svg" class="icon" alt="" (click)="social('fb')">
-          <img src="../../assets/instagram.svg" class="icon" alt="" (click)="social('insta')">
+          <img src="../../assets/Instagram.svg" class="icon" alt="" (click)="social('insta')">
           <img src="../../assets/whatsapp.svg" class="icon" alt="" (click)="social('whatsapp')">
           <img src="../../assets/linkedin.svg" class="icon" alt="" (click)="social('linkedin')">
           <img src="../../assets/telegram.svg" class="icon" alt="" (click)="social('telegram')">
@@ -40,39 +58,33 @@
       </ion-row>
       
       <ion-row>
-       <ion-col>
-        <ion-list class="ion-item">
-          <ion-item>
-            <ion-label class="ion-label-premium" routerLink="/home/premium"><img src="../../assets/Premium-icon.svg" alt=""> &nbsp; become premium member </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/my-team"><img src="../../assets/my-team.svg" alt=""> &nbsp; my team </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/my-account.svg" alt=""> &nbsp; my accounts</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/kyc.svg" alt=""> &nbsp; KYC</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/edit-profile.svg" alt=""> &nbsp; edit profile</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/change-password.svg" alt=""> &nbsp; change password</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/coming-soon"><img src="../../assets/app-lock.svg" alt=""> &nbsp; app lock</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/policies"><img src="../../assets/policies.svg" alt=""> &nbsp; policies</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label" routerLink="/home/help-and-support"><img src="../../assets/help-support.svg" alt=""> &nbsp; help and support</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label class="ion-label"  (click)="logout()"><img src="../../assets/logout.svg" alt=""> &nbsp; logout</ion-label>
-          </ion-item>
-        </ion-list>
+       <ion-col size="12">
+         <div class="list">
+          <div class="list-item" *ngIf="premium == true">
+            <p class="ion-label-premium" routerLink="/home/premium"><img src="../../assets/Premium-icon.svg" alt=""> &nbsp; become premium member </p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/my-team"><img src="../../assets/my-team.svg" alt=""> &nbsp; my team </p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/my-accounts"><img src="../../assets/my-account.svg" alt=""> &nbsp; my accounts</p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/kyc"><img src="../../assets/kyc.svg" alt=""> &nbsp; KYC</p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/coming-soon"><img src="../../assets/app-lock.svg" alt=""> &nbsp; app lock</p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/policies"><img src="../../assets/policies.svg" alt=""> &nbsp; policies</p>
+          </div>
+          <div class="list-item">
+            <p routerLink="/home/help-and-support"><img src="../../assets/help-support.svg" alt=""> &nbsp; help and support</p>
+          </div>
+          <div class="list-item">
+            <p class="log-out"  (click)="logout()"><img src="../../assets/logout.svg" alt=""> &nbsp; logout</p>
+          </div>
+         </div>
        </ion-col>
      </ion-row>
     </ion-grid>

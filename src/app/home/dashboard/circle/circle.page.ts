@@ -23,6 +23,7 @@ export class CirclePage implements OnInit {
       this.bs.fetchCircle().subscribe((res)=>{
         this.resObj = res
         this.resData = this.resObj.data
+        console.log(res)
       })
     }
     tran(id,name) {

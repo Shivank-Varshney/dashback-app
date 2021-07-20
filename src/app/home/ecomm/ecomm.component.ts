@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-ecomm',
@@ -16,7 +17,10 @@ export class EcommComponent implements OnInit {
     slide.startAutoplay();
   }
 
-  nav(){
-    this.router.navigate(['/home/coming-soon'])
+  nav(siteUrl){
+    // console.log(siteUrl)
+    Browser.open({url:siteUrl});
+
+    
   }
 }

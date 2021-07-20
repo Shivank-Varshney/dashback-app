@@ -5,11 +5,11 @@
 }
 
 .container{
-    background-color: #fff;
+    background-image: linear-gradient(to right, #37A7E6, #3D54BA);
     min-height: 100vh;
     padding: 0 10px;
     h3{
-        color: #111420;
+        color: #fff;
         padding: 40px 0 28px 20px;
         font-size: 24px;
         display: flex;
@@ -21,7 +21,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        color: #162249;
+        color: #fff;
         padding: 40px 0 28px 20px;
         font-size: 24px;
         padding-right: 10px;

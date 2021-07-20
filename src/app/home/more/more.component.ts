@@ -16,7 +16,7 @@ export class MoreComponent implements OnInit {
     slide.startAutoplay();
   }
 
-  nav(){
-    this.router.navigate(['/home/coming-soon'])
+  nav(page){
+    this.router.navigate(['/home/'+page])
   }
 }

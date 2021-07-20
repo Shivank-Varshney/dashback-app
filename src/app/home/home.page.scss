@@ -1,44 +1,67 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#container{
+#container {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+  background-image: linear-gradient(to right, #37a7e6, #3d54ba);
   color: #fff;
   padding: 15px 0 0 0;
-  .dashboard-heading{
+  .main {
+    // background-image: url(../../../assets/premium-bg.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    // height: 50vh;
+    h4 {
+      // margin-top: 10px;
+      font-size: 32px;
       text-align: center;
       text-transform: uppercase;
-      font-weight: bolder;
-      font-size: 34px;
-      margin-top: 12px;
       font-family: "s-bold", sans-serif;
+      color: white;
+    }
+    p {
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-family: "s-bold", sans-serif;
+      color: #f2a408;
+      font-weight: bold;
+      margin: -4px 0 0 90px;
+    }
   }
-  .img-outer-div{
+  .dashboard-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 34px;
+    margin-top: 15px;
+    font-family: "s-bold", sans-serif;
+  }
+  .img-outer-div {
     display: flex;
     margin-top: 22px;
-    .dots{
+    .dots {
       padding: 0 10px;
       height: 22px;
       margin-left: auto;
     }
   }
-  .big-img{
+  .big-img {
     position: absolute;
     top: 90px;
-    left: 50%;
-    margin-left: -70px;
-    height: 140px;
-    width: 140px;
+    left: 25%;
+    margin-left: -60px;
+    height: 120px;
+    width: 120px;
     background-color: #fff;
     border-radius: 50%;
   }
-  .small-img{
+  .small-img {
     position: absolute;
-    top: 16px;
+    top: 18px;
     left: 5px;
     height: 34px;
     width: 34px;
@@ -46,90 +69,141 @@
     border-radius: 50%;
     margin: 16px 0 0 10px;
   }
-  .dashboard-username{
-      text-align: center;
-      padding: 0 0 0 30px;
-      font-size: 24px;
-      margin: 190px 0 20px 0;
-      text-transform: capitalize;
-      font-family: "s-semi-bold", sans-serif;
+  .dashboard-username {
+    font-size: 22px;
+    margin: 40px 0 5px 0;
+    text-transform: capitalize;
+    font-family: "s-semi-bold", sans-serif;
+    h5 {
+      height: 25px;
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+    }
+    .edit {
+      display: flex;
+      margin-top: 10px;
+      p {
+        font-size: 10px;
+        background-color: #fff;
+        color: #3d54ba;
+        margin-right: 5px;
+        border-radius: 3px;
+        padding: 0 2px;
+        cursor: pointer;
+      }
+    }
   }
-  .icon-text{
+  .premium-username {
+    font-size: 22px;
+    margin: 40px 0 5px 0;
+    text-transform: capitalize;
+    font-family: "s-semi-bold", sans-serif;
+    h5 {
+      height: 25px;
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+    }
+    .edit {
+      display: flex;
+      margin-top: 10px;
+      p {
+        font-size: 10px;
+        background-color: #f2a408;
+        color: #fff;
+        margin-right: 5px;
+        border-radius: 3px;
+        padding: 0 2px;
+        cursor: pointer;
+      }
+    }
+  }
+  .icon-text {
     text-align: center;
-    margin: 0 0 15px 0;
+    margin: 40px 0 15px 0;
     font-size: 12px;
     font-family: "s-regular", sans-serif;
   }
-  .icons{
+  .icons {
     display: flex;
     justify-content: center;
     margin: 0 0 20px 0;
-    .icon{
+    .icon {
+      cursor: pointer;
       height: 20px;
       margin: 0 8px;
     }
   }
-  .ion-item{
-    --ion-item-background: transparent;
-    min-height: 25vh;
-    max-height: 30vh;
+  .list {
+    max-height: 40vh;
     overflow-y: scroll;
-    padding: 0 0 50px 0;
-    .ion-label{
+    padding: 0 10px 40px;
+    .list-item {
       color: rgba(255, 255, 255, 0.945);
       text-transform: capitalize;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 12px;
+      border-bottom: 1px solid #3d54ba;
       font-family: "s-semi-bold", sans-serif;
-      img{
+      font-weight: bold;
+      padding: 8px 25px;
+      img {
         height: 14px;
       }
+      .log-out {
+        color: #a53640;
+      }
     }
-    .ion-label-premium{
+    .ion-label-premium {
       text-transform: capitalize;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 12px;
       font-family: "s-semi-bold", sans-serif;
       animation: blink 3s infinite;
-      img{
+      img {
         height: 14px;
       }
     }
-    @keyframes blink{
-      0% {color: #F2A408;}
-      25% {color: #fff;}
-      50% {color: #F2A408;}
-      75% {color: #fff;}
-      100% {color: #F2A408;}
+    @keyframes blink {
+      0% {
+        color: #f2a408;
+      }
+      25% {
+        color: #fff;
+      }
+      50% {
+        color: #f2a408;
+      }
+      75% {
+        color: #fff;
+      }
+      100% {
+        color: #f2a408;
+      }
     }
   }
 }
 
-
-
-#container-card{
+#container-card {
   background-color: #fff;
   width: 100%;
   position: absolute;
   bottom: 0;
   border-radius: 50px 50px 0 0;
   padding-bottom: 50px;
-  .card-line{
-      height: 4px;
-      width: 180px;
-      background-color: rgb(233, 229, 229);
-      margin: 15px auto 40px;
+  .card-line {
+    height: 4px;
+    width: 180px;
+    background-color: rgb(233, 229, 229);
+    margin: 15px auto 40px;
   }
-  .inner-card{
+  .inner-card {
     overflow-y: scroll;
     padding: 0 15px;
   }
 }
 
-
-
-#navbar{
-  background-image: linear-gradient(to right, #37A7E6, #3D54BA);
+#navbar {
+  background-image: linear-gradient(to right, #37a7e6, #3d54ba);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -137,7 +211,7 @@
   height: 50px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  svg{
+  svg {
     height: 50px;
     padding: 15px 0 12px;
   }

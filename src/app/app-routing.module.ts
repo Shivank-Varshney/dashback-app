@@ -34,7 +34,7 @@ const routes: Routes = [
     path: 'register/:mob',
     loadChildren: () => import('./regi/regi.module').then(m => m.RegiPageModule),
     canActivate:[LoginGuard]
-  },
+  }
 ];
 
 @NgModule({

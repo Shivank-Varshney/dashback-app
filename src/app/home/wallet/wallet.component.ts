@@ -19,15 +19,19 @@ trans:boolean=false
 countObj;
 countData;
 last;
+balObj;
+balAmt;
+reward;
   constructor(private toast: ToastController, private loader: LoadingController,private alertC: AlertController, private bs: BackendService, private fb: FormBuilder,
               private router: Router ) { }
 
   ngOnInit() {
     this.adForm()
     this.fetchCount()
+    this.fetchBal()
   }
   add(){
-    this.router.navigate(['/home/add-money'])
+    this.router.navigate(['/home/addMoney'])
   }
   adForm(){
     this.adF = this.fb.group({
@@ -151,6 +155,7 @@ last;
             res.present()
             
           this.fetchCount()
+          this.fetchBal()
           })
         })
     }
@@ -162,6 +167,15 @@ last;
       this.countData = this.countObj.data
       this.last = this.countData.lastAd
       console.log(this.countData)
+    })
+  }
+
+  async fetchBal(){
+    this.bs.fetchBal(this.mobile).subscribe((res)=>{
+      this.balObj = res
+      console.log(this.balObj)
+      this.balAmt = this.balObj.data.walletBal
+      this.reward = this.balObj.data.reward
     })
   }
 }

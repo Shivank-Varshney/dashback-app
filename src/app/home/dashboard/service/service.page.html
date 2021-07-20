@@ -5,6 +5,20 @@
     </ion-col>
   </ion-row>
   <ion-row>
+    <ion-col>
+      <div class="search-bar">
+        <form [formGroup]="search" (ngSubmit)="find()">
+          <div class="input-field">
+            <input type="search" class="input-box" placeholder="Enter your name" formControlName = "search"  />
+            <button type="submit" class="submit-btn">
+              <ion-icon class="icon" name="search-outline"></ion-icon>
+            </button>
+          </div>  
+        </form> 
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
     <ion-col size="6" *ngFor="let r of resData">
       <div class="card"  (click)="circle(r.operator_Code, r.operator_Name)">
         <div class="img">

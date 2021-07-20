@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-successful',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./successful.page.scss'],
 })
 export class SuccessfulPage implements OnInit {
-
-  constructor() { }
+type
+amt
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.type = this.route.snapshot.paramMap.get("type");
+    this.amt = this.route.snapshot.paramMap.get("amt")
   }
 
 }

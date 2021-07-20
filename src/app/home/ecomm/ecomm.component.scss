@@ -8,6 +8,19 @@
     height: 25rem;
 }
 
+.ionic-row{
+    .ionic-col-grid{
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        img{
+            height: 180px;
+        }
+    }
+}
+
 @media only screen and (max-width: 1080px) {
     .slider{
     height: 17rem;
@@ -30,59 +43,4 @@
     .slider{
     height: 6rem;
     }
-}
-
-.ionic-col{
-    height: 15rem;
-    background-color: rgb(219, 219, 219);
-    border: 5px solid #fff;
-}
-
-.ecomm-list{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 20px 0;
-    .ecomm-item{
-        background-color: #162248;
-        border-radius: 50%;
-        height: 70px;
-        width: 70px;
-    }
-}
-
-.ionic-col-grid{
-    height: 7rem;
-    border: 5px solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    img{
-        height: 100%;
-    }
-}
-
-@media only screen and (max-width: 1080px) {
-    .ionic-col{
-        height: 13rem;
-    } 
-}
-
-@media only screen and (max-width: 720px) {
-    .ionic-col{
-        height: 11rem;
-    } 
-}
-
-@media only screen and (max-width: 420px) {
-    .ionic-col{
-        height: 9rem;
-    } 
-}
-
-@media only screen and (max-width: 320px) {
-    .ionic-col{
-        height: 7rem;
-    } 
 }

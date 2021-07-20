@@ -19,8 +19,7 @@ export class DashboardComponent implements OnInit {
     // this.router.navigate(['home/coming-soon'])
   }
   money(page){
-    this.router.navigate(['home/'+page])
-    // this.router.navigate(['home/coming-soon'])
+      this.router.navigate(['home/'+page])
   }
 
   refer(){

@@ -7,118 +7,109 @@
           Pay Money
         </h3>
       </ion-col>
-      <ion-col size="12">
-        <h4>Who do you want <br> to trasfer money to?</h4>
-      </ion-col>
     </ion-row> 
-    <ion-row>
-      <ion-col>
-        <ion-item lines="Center" class="input-field">
-          <ion-label class="label" position="floating">Name or number</ion-label>
-          <ion-input type="tel" required ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="btn">proceed</div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <div class="contact-heading">
-          <p>All contacts</p>
+
+    <div *ngIf="trans == false">
+      <ion-row>
+        <ion-col size="12">
+          <h4>Who do you want <br> to trasfer money to?</h4>
+        </ion-col>
+      </ion-row>
+      <form [formGroup]="search" (ngSubmit)="searchNum()">
+        <ion-row>
+          <ion-col size="12">
+            <input type="tel" class="input-field" placeholder="Number" formControlName="mobile" pattern="[0-9]{10}" required />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="submit-btn">
+            <button type="submit" class="btn" [disabled]=!search.valid>Proceed</button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="contact-heading">
+            <p>All contacts</p>
+          </div>
+        </ion-col>
+        <div class="contact-height">
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="contact-details">
+            <img src="../../../../assets/profile.svg" alt="">
+            <div class="details">
+              <p>name</p>
+              <p>number</p>
+            </div>
+          </ion-col>
         </div>
-      </ion-col>
-      <div class="contact-height">
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="contact-details">
-          <img src="../../../../assets/profile.svg" alt="">
-          <div class="details">
-            <p>name</p>
-            <p>number</p>
-          </div>
-        </ion-col>
-      </div>
-    </ion-row>
+      </ion-row>
+    </div>
+
+    
+    <div *ngIf="trans == true">
+      <form [formGroup]="transfer" (ngSubmit)="fundTransfer()">
+        <ion-row>
+          <ion-col size="12" class="img">
+            <img src="../../../../assets/pro-conn.svg" class="pro-conn" alt="pro-conn">
+          </ion-col>
+          <ion-col size="12">
+            <h5>Paying money to <span>{{ searchData.name}}</span></h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <input type="text" class="input-field" placeholder="Amount" formControlName="amt" pattern="(5000|([1-4][0-9][0-9][0-9])|([1-9][0-9][0-9])|([1-9][0-9])|[1-9])" required />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="submit-btn">
+            <button type="submit" class="btn" [disabled]="!transfer.valid">Send Money</button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
   </div>
 </ion-content>
-
-
-<!-- <div class="container">
-  <ion-row>
-    <ion-col size="12">
-      <div class="main">
-        <img src="../../../../assets/pro-conn.svg" alt="">
-        <p>Paying money to xyz</p>
-        <h4>₹00</h4>
-        <div class="btn-send">send</div>
-      </div>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="12" class="key-card">
-      <ion-row>
-        <ion-col class="ion-col">1</ion-col>
-        <ion-col class="ion-col">2</ion-col>
-        <ion-col class="ion-col">3</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-col">4</ion-col>
-        <ion-col class="ion-col">5</ion-col>
-        <ion-col class="ion-col">6</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-col">7</ion-col>
-        <ion-col class="ion-col">8</ion-col>
-        <ion-col class="ion-col">9</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-col">X</ion-col>
-        <ion-col class="ion-col">0</ion-col>
-        <ion-col class="ion-col">.</ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
-</div> -->

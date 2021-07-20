@@ -22,23 +22,25 @@ export class RegiPage implements OnInit {
   sponser:boolean = false;
   msg;
   resObj;
+  sId;
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private router: Router, private bs: BackendService) { 
     
   }
 
   ngOnInit() {
     this.regiForm()
-    this.spNo = this.route.snapshot.paramMap.get("mob")
-    if(this.spNo == null || this.spNo == '9711855888' || this.spNo == '9354951735' || this.spNo == '7532866802' || this.spNo == '9999509088' || this.spNo == '9555047692'){
+    this.sId = this.route.snapshot.paramMap.get("mob")
+    if(this.sId == null || this.sId == 'uipb9e' || this.sId == 'ye2tnv' || this.sId == 'fyb4ae' || this.sId == 'swgkac' || this.sId == '3wkxwu'){
       this.regiF.controls['sponsorNo'].setValue('9999509088');
       this.regiF.controls['S_name'].setValue('Dashback');
       this.sponser = false
     }
     else{
-      this.bs.checkSpon(this.spNo).subscribe((res)=>{
+      this.bs.checkSpon(this.sId).subscribe((res)=>{
         this.s_Obj = res
         if(this.s_Obj.err ==0){
           this.sp_N = this.s_Obj.data.name
+          this.spNo = this.s_Obj.data.mobile
           this.regiF.controls['sponsorNo'].setValue(this.spNo);
           this.regiF.controls['S_name'].setValue(this.sp_N);
           this.sponser = true;
@@ -81,6 +83,7 @@ export class RegiPage implements OnInit {
       if(this.resObj.err == 0){
         localStorage.setItem("name",this.resObj.data.name)
         localStorage.setItem("number",this.resObj.data.mobile)
+        localStorage.setItem("id",this.resObj.data.id)
         this.router.navigate(['home'])
       }
       else{

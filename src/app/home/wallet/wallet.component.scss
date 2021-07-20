@@ -22,11 +22,14 @@
     text-align: center;
     font-size: 1.5rem;
   }
+  .svg{
+    padding: 20px;
+  }
   .balance-icon-align{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 55px 0;
+    margin: 0 0 10px 0;
     .balance-icon{
       height: 2.4rem;
     }
@@ -43,8 +46,6 @@
 
 
   .history{
-    height: 37vh;
-    overflow-y: scroll;
     padding: 5px 0;
     .earning-history{
       background-color: rgb(224, 219, 219);
